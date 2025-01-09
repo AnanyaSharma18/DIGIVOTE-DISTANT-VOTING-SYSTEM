@@ -1,0 +1,538 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+  }
+  
+  /* Main Container */
+  .container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Sidebar Navigation */
+  .tabs {
+    width: 20%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+  
+  .tabs ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .tabs ul li {
+    margin-bottom: 15px;
+  }
+  
+  .tabs ul li a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 10px;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tabs ul li a:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Form Sections */
+  .form-sections {
+    width: 80%;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100vh;
+  }
+  
+  section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    margin-top: 0;
+    background-color: #b1d7ff;
+    border-radius: 5px;
+    padding: 2px 2px 5px 5px;
+   
+    
+  }
+  
+  /* Button Styling */
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .save-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .save-btn:hover {
+    background-color: #218838;
+  }
+  
+  .next-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .next-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /*...........................................................*/
+  /* From Uiverse.io by kamehame-ha */ 
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  width:300px;
+  position: static;
+  max-width: 240px;
+}
+
+.coolinput label.text {
+  font-size: 0.75rem;
+  color: #007bff;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+.coolinput label.file {
+  font-size: 0.75rem;
+  color: #007bff;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+
+
+.coolinput label.email {
+  font-size: 0.75rem;
+  color: #007bff;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+
+
+.coolinput label.phone {
+  font-size: 0.75rem;
+  color: #007bff;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+.coolinput1 label.text {
+  font-size: 0.75rem;
+  color: #007bff;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+.coolinput1 label.file {
+  font-size: 0.75rem;
+  color: #007bff;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+
+.coolinput1 label.email {
+  font-size: 0.75rem;
+  color: #007bff;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+.coolinput1 label.phone {
+  font-size: 0.75rem;
+  color: #007bff;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+
+.coolinput input[type=text].input {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 2px #007bff solid;
+  border-radius: 5px;
+  background: #e8e8e8;
+}
+.coolinput input[type=file].input {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 2px #007bff solid;
+  border-radius: 5px;
+  background: #e8e8e8;
+}
+.coolinput input[type=email].input {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 2px #007bff solid;
+  border-radius: 5px;
+  background: #e8e8e8;
+}
+.coolinput input[type=phone].input {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 2px #007bff solid;
+  border-radius: 5px;
+  background: #e8e8e8;
+}
+.coolinput1 input[type=text].input {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 2px #007bff solid;
+  border-radius: 5px;
+  background: #e8e8e8;
+}
+
+.coolinput input[type=text].input:focus {
+  outline: none;
+}
+.coolinput input[type=file].input:focus {
+  outline: none;
+}
+.coolinput input[type=email].input:focus {
+  outline: none;
+}
+.coolinput input[type=phone].input:focus {
+  outline: none;
+}
+
+.coolinput1 input[type=text].input:focus {
+  outline: none;
+}
+
+
+
+.container1 {
+  width: 300px;
+
+  max-width: 240px;
+  background-color: #13121269;
+  border-radius: 5px;
+  position: static;
+}
+
+.label1 {
+  font-weight:500;
+  font-size: 15px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.inpdddut[type="file"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  background-color:#007bff;
+  border-radius: 5px;
+  width: 195px;
+  cursor: pointer;
+}
+
+.inpdddut[type="submit"] {
+  padding: 10px 20px;
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.inpdddut[type="submit"]:hover {
+  background-color: #006F8F;
+}
+
+/* From Uiverse.io by gharsh11032000 */ 
+.radio-buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.radio-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-button__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-button__label {
+  display: inline-block;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 14px;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.radio-button__custom {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.radio-button__input:checked + .radio-button__label .radio-button__custom {
+  transform: translateY(-50%) scale(0.9);
+  border: 5px solid #4c8bf5;
+  color: #4c8bf5;
+}
+
+.radio-button__input:checked + .radio-button__label {
+  color: #4c8bf5;
+}
+
+.radio-button__label:hover .radio-button__custom {
+  transform: translateY(-50%) scale(1.2);
+  border-color: #4c8bf5;
+  box-shadow: 0 0 10px #4c8bf580;
+}
+
+.radio-buttons-container1 {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.radio-button1 {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-button__input1 {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-button__label1 {
+  display: inline-block;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 14px;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.radio-button__custom1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.radio-button__input1:checked + .radio-button__label1 .radio-button__custom1 {
+  transform: translateY(-50%) scale(0.9);
+  border: 5px solid #4c8bf5;
+  color: #4c8bf5;
+}
+
+.radio-button__input1:checked + .radio-button__label1 {
+  color: #4c8bf5;
+}
+
+.radio-button__label1:hover .radio-button__custom1 {
+  transform: translateY(-50%) scale(1.2);
+  border-color: #4c8bf5;
+  box-shadow: 0 0 10px #4c8bf580;
+}
+
+.radio-input2 input {
+  display: none;
+}
+
+.radio-input2 {
+  --container_width: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000000;
+  width: var(--container_width);
+  overflow: hidden;
+  border: 1px solid rgba(53, 52, 52, 0.226);
+}
+
+.radio-input2 label {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-weight: 600;
+  letter-spacing: -1px;
+  font-size: 14px;
+}
+
+.selection2 {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: calc(var(--container_width) / 2);
+  z-index: 0;
+  left: 0;
+  top: 0;
+  transition: 0.15s ease;
+}
+
+.radio-input2 label:has(input:checked) {
+  color: #fff;
+}
+
+.radio-input2 label:has(input:checked) ~ .selection2 {
+  background-color: rgb(11 117 223);
+  display: inline-block;
+}
+
+.radio-input2 label:nth-child(1):has(input:checked) ~ .selection2 {
+  transform: translateX(calc(var(--container_width) * 0 / 2));
+}
+
+.radio-input2 label:nth-child(2):has(input:checked) ~ .selection2 {
+  transform: translateX(calc(var(--container_width) * 1 / 2));
+}
+
+
+
+
+
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  background-color: #171717;
+  padding: 1em 2em;
+  border: none;
+  border-radius: .6rem;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+button span:not(:nth-child(6)) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 30px;
+  width: 30px;
+  background-color: #0c66ed;
+  border-radius: 50%;
+  transition: .6s ease;
+}
+
+button span:nth-child(6) {
+  position: relative;
+}
+
+button span:nth-child(1) {
+  transform: translate(-3.3em, -4em);
+}
+
+button span:nth-child(2) {
+  transform: translate(-6em, 1.3em);
+}
+
+button span:nth-child(3) {
+  transform: translate(-.2em, 1.8em);
+}
+
+button span:nth-child(4) {
+  transform: translate(3.5em, 1.4em);
+}
+
+button span:nth-child(5) {
+  transform: translate(3.5em, -3.8em);
+}
+
+button:hover span:not(:nth-child(6)) {
+  transform: translate(-50%, -50%) scale(4);
+  transition: 1.5s ease;
+}
+  

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Side Tab Navigation with Save & Next</title>
+  <link rel="stylesheet" href="tab1.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar Navigation -->
+    <div class="tabs">
+      <ul>
+        <li><a href="#section1">Select State, District</a></li>
+        <li><a href="#section2">Personal Details</a></li>
+        <li><a href="#section3">Date of Birth</a></li>
+        <li><a href="#section4">Contact Details</a></li>
+        <li><a href="#section5">Aadhaar Details</a></li>
+        <li><a href="#section6">Gender</a></li>
+        <li><a href="#section7">Personal Addres</a></li>
+        <li><a href="#section8">Present Address</a></li>
+        <li><a href="#section9">Remote Eligiblelity</a></li>
+      </ul>
+    </div>
+
+    <!-- Form Sections -->
+    <div class="form-sections">
+      <div class="heading" style="font-size: 14px; text-decoration: underline; text-align: center;">
+        <h1>Application form For new Voters</h1></div>
+      <section id="section1">
+        <h2>Select State, District </h2>
+        <p>Form fields for State, District selection go here.</p>
+        <div class="buttons" >
+          
+         <div class="input1" style="display: flex; align-items: center; justify-content: space-around;">
+          <div class="coolinput""> 
+            <label for="input" class="text">State:</label>
+            <input type="text" placeholder="Write here..." name="input" class="input">
+        </div>
+        <div class="coolinput">
+          <label for="input" class="text">District:</label>
+          <input type="text" placeholder="Write here..." name="input" class="input">
+      </div>
+      <div class="buttons">
+        <button class="save-btn">Save</button>
+        <button class="next-btn" data-next="section2">Next</button>
+      </div>
+         </div>
+        </div>
+        
+      </section>
+
+
+
+      <section id="section2">
+        <h2>Personal Details</h2>
+        <p>Form fields for Personal Details go here.</p>
+        <div class="buttons" >
+          
+         <div class="input2" style="display: flex; align-items: center; justify-content: space-around;">
+          <div class="coolinput""> 
+            <label for="input" class="text">Name:</label>
+            <input type="text" placeholder="Write here..." name="input" class="input">
+        </div>
+        <div class="container1"style="background-color: white;" >
+          <form >
+            <label class="label1" for="arquivo">Upload your Photo:</label>
+            <input accept=".jpg, .jpeg, .png, .gif, .pdf" class="inpdddut" name="arquivo" id="arquivo" type="file">
+
+          </form>
+        </div>
+      <div class="buttons">
+        <button class="save-btn">Save</button>
+        <button class="next-btn" data-next="section3">Next</button>
+      </div>
+         </div>
+        </div>
+      <section id="section3">
+        <h2>Date of Birth</h2>
+        <p>Form fields for Date of Birth go here.</p>
+        <div class="buttons" >
+          
+          <div class="input7" style="display: flex; align-items: center; justify-content: space-between; " >
+           <div class="coolinput"  style="margin-left: 70px;"> 
+             <label for="input" class="text">DOB:</label>
+             <input type="phone" placeholder="Write here..." name="input" class="input">
+         </div>
+    
+       <div class="buttons" style="margin-right: 50px;">
+        <button class="save-btn">Save</button>
+        <button class="next-btn" data-next="section4">Next</button>
+      </div>
+          </div>
+         </div>
+      
+      </section>
+
+
+      
+      <section id="section4">
+        <h2>Contact Details</h2>
+        <p>Form fields for Contact Details go here.</p>
+        <div class="buttons" >
+          
+          <div class="input4" style="display: flex; align-items: center; justify-content: space-around;">
+           <div class="coolinput""> 
+             <label for="input" class="text">Phone Number:</label>
+             <input type="phone" placeholder="Write here..." name="input" class="input">
+         </div>
+         <div class="coolinput">
+           <label for="input" class="text">Email:</label>
+           <input type="email" placeholder="Write here..." name="input" class="input">
+       </div>
+       <div class="buttons" style="margin-left: 100px;">
+        <button class="save-btn">Save</button>
+        <button class="next-btn" data-next="section5">Next</button>
+       </div>
+          </div>
+         </div>
+       
+      
+      </section>
+
+
+      <section id="section5">
+        <h2>Aadhaar Details</h2>
+        <p>Form fields for Aadhaar Details go here.</p>
+        <div class="buttons" >
+          
+          <div class="input1" style="display: flex; align-items: center; justify-content: space-between; " >
+           <div class="coolinput"  style="margin-left: 70px;"> 
+             <label for="input" class="text">Adhar Number:</label>
+             <input type="phone" placeholder="Write here..." name="input" class="input">
+         </div>
+    
+       <div class="buttons" style="margin-right: 50px;">
+        <button class="save-btn">Save</button>
+        <button class="next-btn" data-next="section6">Next</button>
+      </div>
+          </div>
+         </div>
+       
+      </section>
+      <section id="section6">
+        <h2>Gender</h2>
+        <p>Form fields for Gender selection go here.</p>
+        <div class="input6" style="display: flex; align-items: center; justify-content: space-between;">
+          <div class="radio-buttons-container" style="margin-left: 70px;">
+            <div class="radio-button">
+              <input name="radio-group" id="radio2" class="radio-button__input" type="radio">
+              <label for="radio2" class="radio-button__label">
+                <span class="radio-button__custom"></span>
+                    
+                   Male
+              </label>
+            </div>
+            <div class="radio-button">
+              <input name="radio-group" id="radio1" class="radio-button__input" type="radio">
+              <label for="radio1" class="radio-button__label">
+                <span class="radio-button__custom"></span>
+                
+                Female
+              </label>
+            </div>
+            <div class="radio-button">
+              <input name="radio-group" id="radio3" class="radio-button__input" type="radio">
+              <label for="radio3" class="radio-button__label">
+                <span class="radio-button__custom"></span>
+                    
+                   Other
+              </label>
+            </div>
+            </div>
+            <div class="buttons" style="margin-right: 50px;">
+              <button class="save-btn">Save</button>
+              <button class="next-btn" data-next="section7">Next</button>
+            </div>
+        </div>
+       
+      </section>
+      <section id="section7">
+        <h2>Personal Addres</h2>
+        <p>Form fields for Personal Details go here.</p>
+        <div class="buttons" >
+          
+          <div class="input7" style="display: flex; align-items: center; justify-content: space-around;">
+            <div class="coolinput1" style=" display: flex;flex-direction: column; width:700px;   position: static;"> 
+              <label for="input" class="text">Personal Addres: </label>
+              <input type="text" placeholder="Write here..." name="input" class="input" style="height: 60px;">
+          </div>
+          
+       <div class="buttons">
+        <button class="save-btn">Save</button>
+        <button class="next-btn" data-next="section8">Next</button>
+       </div>
+          </div>
+         </div>
+      </section>
+      <section id="section8">
+        <h2>Present Address</h2>
+        <p>Form fields for Present Address go here.</p>
+        <div class="buttons" >
+          
+          <div class="input8" style="display: flex; align-items: center; justify-content: space-around;">
+            <div class="coolinput1" style=" display: flex;flex-direction: column; width:700px;   position: static;"> 
+              <label for="input" class="text">Relatives Address: </label>
+              <input type="text" placeholder="Write here..." name="input" class="input" style="height: 60px;">
+          </div>
+          
+       <div class="buttons">
+        <button class="save-btn">Save</button>
+        <button class="next-btn" data-next="section4">Next</button>
+       </div>
+          </div>
+         </div>
+      
+      </section>
+      <section id="section9">
+        <h2>Remote Eligiblelity</h2>
+        <p>Form fields for Remote Eligiblelity go here.</p>
+        <div class="input9" style="display: flex; align-items: center; justify-content: space-between;">
+          <div class="radio-buttons-container1" style="margin-left: 70px;">
+            <div class="radio-button1">
+              <input name="radio-group" id="radio21" class="radio-button__input1" type="radio">
+              <label for="radio21" class="radio-button__label1">
+                <span class="radio-button__custom1"></span>
+                    
+                Senior Citizen
+              </label>
+            </div>
+            <div class="radio-button1">
+              <input name="radio-group" id="radio11" class="radio-button__input1" type="radio">
+              <label for="radio11" class="radio-button__label1">
+                <span class="radio-button__custom1"></span>
+                
+                Working Professional/ Student
+              </label>
+            </div>
+            <div class="radio-button1">
+              <input name="radio-group" id="radio31" class="radio-button__input1" type="radio">
+              <label for="radio31" class="radio-button__label1">
+                <span class="radio-button__custom1"></span>
+                    
+                Disabled
+              </label>
+            </div>
+            </div>
+            <div class="buttons" style="margin-right: 50px;">
+              <button class="save-btn">Save</button>
+             
+            </div>
+        </div>
+
+      <div class="f1" style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 40px;">
+        <div class="h1"><h1 style="font-weight: bold;">
+          Prooffed Document:
+        </h1>
+        </div> 
+        <div class="radio-input2" style="margin-right: 250px;">
+          
+          <label>
+            <input value="value-12" name="value-radio" id="value-12" type="radio" />
+            <span>Yes</span>
+          </label>
+          <label>
+            <input value="value-22" name="value-radio" id="value-22" type="radio" />
+            <span>No</span>
+          </label>
+          <span class="selection2"></span>
+        </div>
+        <div class="container1"style="background-color: white;  " >
+          <form >
+            <label class="label1" for="arquivo">Proffed Document Attached:</label>
+            <input accept=".jpg, .jpeg, .png, .gif, .pdf" class="inpdddut" name="arquivo" id="arquivo" type="file">
+
+          </form>
+        </div>
+      </div>
+    
+      </section>
+
+      <button style="margin-left: 500px;" onclick="my_fun()">
+        <span class="circle1"></span>
+        <span class="circle2"></span>
+        <span class="circle3"></span>
+        <span class="circle4"></span>
+        <span class="circle5"></span>
+        <span class="text">Submit</span>
+    </button>
+    </div>
+  </div>
+  <script src="tab1.js">    </script>
+</body>
+</html>
