@@ -1,0 +1,19 @@
+{
+  "name": "blockchain-voting-platform",
+  "version": "1.0.0",
+  "description": "A blockchain-based distant voting platform ensuring security, transparency, and accountability during elections.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "fabric-network": "^2.2.0",
+    "fabric-ca-client": "^1.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
