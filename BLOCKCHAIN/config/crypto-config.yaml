@@ -1,0 +1,51 @@
+Organizations:
+  - Name: Org1
+    Domain: org1.example.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+      Domain: org1.example.com
+    Users:
+      Count: 1
+  - Name: Org2
+    Domain: org2.example.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+      Domain: org2.example.com
+    Users:
+      Count: 1
+
+Orderer:
+  Orderer:
+    Domain: orderer.example.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+      Domain: orderer.example.com
+    Users:
+      Count: 1
+
+Peer:
+  Peer:
+    Domain: peer.example.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+      Domain: peer.example.com
+    Users:
+      Count: 1
+
+Profiles:
+  SampleDevMode:
+    Orderer:
+      OrdererType: solo
+      Addresses:
+        - orderer.example.com:7050
+    Consortium: SampleConsortium
+    Application:
+      Organizations:
+        - *Org1
+        - *Org2
+      Capabilities:
+        V2_0: {}

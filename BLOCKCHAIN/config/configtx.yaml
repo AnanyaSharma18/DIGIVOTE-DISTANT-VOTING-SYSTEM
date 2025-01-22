@@ -1,0 +1,47 @@
+Organizations:
+  - Name: SampleOrg
+    Domain: sampleorg.example.com
+    EnableNodeOUs: true
+    Policies:
+      Readers:
+        Type: Signature
+        Rule: "OR('SampleOrg.member')"
+      Writers:
+        Type: Signature
+        Rule: "OR('SampleOrg.member')"
+      Endorsement:
+        Type: Signature
+        Rule: "OR('SampleOrg.member')"
+
+Application: 
+  Name: VotingApplication
+  Organizations:
+    - *SampleOrg
+
+  Policies:
+    Readers:
+      Type: Signature
+      Rule: "OR('SampleOrg.member')"
+    Writers:
+      Type: Signature
+      Rule: "OR('SampleOrg.member')"
+    Endorsement:
+      Type: Signature
+      Rule: "AND('SampleOrg.member')"
+
+  Capabilities:
+    V2_0: true
+
+Channel: 
+  Name: votingchannel
+  Consortium: SampleConsortium
+  Policies:
+    Readers:
+      Type: Signature
+      Rule: "OR('SampleOrg.member')"
+    Writers:
+      Type: Signature
+      Rule: "OR('SampleOrg.member')"
+    Endorsement:
+      Type: Signature
+      Rule: "AND('SampleOrg.member')"
