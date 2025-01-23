@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Election Voting Portal</title>
+  <link rel="stylesheet" href="voting.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Election Voting Portal</h1>
+    <p>Vote for your Candidate</p>
+  </header>
+  <main class="main-container">
+     <!-- Table Section -->
+    <section class="table-section">
+      <h2>Party Information</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Party Name</th>
+            <th>Logo</th>
+            <th>Candidate</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="partyTable">
+          <!-- Rows will be inserted dynamically -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2025 Election Portal Inc. | All Rights Reserved</p>
+  </footer>
+  <script src="voting.js"></script>
+</body>
+</html>

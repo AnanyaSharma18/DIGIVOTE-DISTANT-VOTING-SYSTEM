@@ -4,386 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <style>
-  
-  * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-    .form {
-        
-        background-color: #fff;
-        display: block;
-        padding: 1rem;
-      width: 500px;
-        
-        border-radius: 0.5rem;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      }
-      
-      .form-title {
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-        font-weight: 600;
-        text-align: center;
-        color: #000;
-      }
-      
-      .input-container {
-        position: relative;
-      }
-      
-      .input-container input, .form button {
-        outline: none;
-        border: 1px solid #e5e7eb;
-        margin: 8px 0;
-      }
-      
-      .input-container input {
-        background-color: #fff;
-        padding: 1rem;
-        
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-        width: 460px;
-        border-radius: 0.5rem;
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-      }
-      
-      .input-container span {
-        display: grid;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        place-content: center;
-      }
-      
-      .input-container span svg {
-        color: #9CA3AF;
-        width: 1rem;
-        height: 1rem;
-      }
-
-      .sub-but{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      
-      
-      
-      .signup-link {
-        color: #6B7280;
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-        text-align: center;
-        margin-top: 20px;
-      }
-      
-      .signup-link a {
-        text-decoration: underline;
-      }
-.form1{
-   height: 100vh;
-   width: 100vw;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   background-color: rgb(170, 170, 227);
-   
-}
-
-
-/* Import Google font - Poppins */
-
-
-
-.container1 {
-  position: relative;
-  width: 460px;
-  border-radius: 12px;
-  padding: 15px 25px 25px;
-  background: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-header {
-  color: #333;
-  margin-bottom: 20px;
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-}
-.input_field {
-  position: relative;
-  height: 35px;
-  margin-top: 15px;
-  width: 150px;
-}
-.refresh_button {
-  position: absolute;
-  top: 24%;
-  left: 100%;
-  
-  transform: translateY(-50%);
-  background: #4F46E5;
-  height: 30px;
-  width: 30px;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
-}
-.refresh_button:active {
-  transform: translateY(-50%) scale(0.98);
-}
-.input_field input,
-.button button {
-  height: 100%;
-  width: 100%;
-  outline: none;
-  border: none;
-  border-radius: 8px;
-}
-.input_field input {
-  padding: 0 15px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-.captch_box input {
-  color: #6b6b6b;
-  font-size: 15px;
-  pointer-events: none;
-}
-.captch_input input:focus {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-}
-.message {
-  font-size: 14px;
-  margin: 14px 0;
-  color: #4F46E5;
-  display: none;
-}
-.message.active {
-  display: block;
-}
-.button button {
-  background: #4F46E5;
-  border-radius: 50px;
-  color: #fff;
-  cursor: pointer;
-  user-select: none;
-  margin-left: 150px;
-}
-.button button:active {
-  transform: scale(0.99);
-}
-.button.disabled {
-  opacity: 0.6;
-  pointer-events: none;
-}
-    
-      </style>
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
-   <div class="main">
+<div class="main">
     <div class="form1">
-        <form class="form">
-            <p class="form-title">Sign Up your account</p>
-             <div class="input-container">
-               <input placeholder="Enter email" type="">
-               <span>
-                
-               </span>
-           </div>
-           <div class="input-container">
-            <input placeholder="Enter phone number" type="">
-            <span>
-             
-            </span>
+      <form class="form" id="signupForm">
+        <p class="form-title">Sign Up your account</p>
+  
+        <!-- Email Field -->
+        <div class="input-container">
+          <input
+            id="email"
+            name="email"
+            placeholder="Enter email"
+            type="email"
+            required
+          />
+          <span></span>
         </div>
-           <div class="input-container">
-               <input placeholder="Enter password" type="password">
-     
-               <span>
-                 <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                   <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
-                   <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
-                 </svg>
-               </span>
-             </div>
-             <div class="container1">
-                
-                <div class="input_field captch_box">
-                  <input type="text" value="" disabled />
-                  <button class="refresh_button">
-                    <i class="fa-solid fa-rotate-right"></i>
-                  </button>
-                </div>
-                <div class="input_field captch_input">
-                  <input type="text" placeholder="Enter captcha" />
-                </div>
-                <div class="message">Entered captcha is correct</div>
-                
-              </div>
-              <div class="input_field button disabled">
-                <button type="button" id="sendOtpButton">Send OTP</button>
-              </div>
-             <div class="sub-but">
-             
-     
-           <p class="signup-link">
-             Back to
-             <a href="login.html" style="text-decoration: none;">Sign in</a>
-           </p>
-        </form>
-     
+  
+        <!-- Mobile Number Field -->
+        <div class="input-container">
+          <input
+            id="mobile"
+            name="mobile"
+            placeholder="Enter mobile number"
+            type="tel"
+            required
+          />
+          <span></span>
+        </div>
+  
+        <!-- Password Field -->
+        <div class="input-container">
+          <input
+            id="password"
+            name="password"
+            placeholder="Enter password"
+            type="password"
+            required
+          />
+          <span>
+            <svg
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                stroke-width="2"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                stroke-width="2"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+              ></path>
+            </svg>
+          </span>
+        </div>
+  
+        <!-- Captcha -->
+        <div class="container1">
+          <div class="input_field captch_box">
+            <input type="text" value="12345" disabled />
+            <button type="button" class="refresh_button">
+              <i class="fa-solid fa-rotate-right"></i>
+            </button>
+          </div>
+          <div class="input_field captch_input">
+            <input id="captchaInput" type="text" placeholder="Enter captcha" />
+          </div>
+          <div id="captchaMessage" class="message">Entered captcha is correct</div>
+        </div>
+  
+        <!-- Submit Button -->
+        <div class="input_field button disabled">
+          <button type="button" id="sendOtpButton" onclick="sendOtpHandler()">Send OTP</button>
+        </div>
+  
+        <!-- Sign-In Link -->
+        <div class="sub-but">
+          <p class="signup-link">
+            Back to
+            <a href="login.html" style="text-decoration: none;">Sign in</a>
+          </p>
+        </div>
+      </form>
     </div>
-   </div>
-   <script>
-
-const form = document.querySelector(".form");
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  // Collect form data
-  const email = document.querySelector('input[placeholder="Enter email"]').value;
-  const phone_number = document.querySelector('input[placeholder="Enter mobile number"]').value;
-  const password = document.querySelector('input[placeholder="Enter password"]').value;
-  const captchaInput = document.querySelector('.captch_input input').value;
-  const captchaServer = document.querySelector(".captch_box input").value;
-
-  // Send data to the backend
-  try {
-    const response = await fetch("http://localhost:5002/user/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email,phone_number, password, captchaInput }),
-    });
-
-    const result = await response.json();
-    alert(result.message);
-
-    if (response.ok) {
-      window.location.href = "login.html"; // Redirect to login page
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    alert("Something went wrong. Please try again.");
-  }
-});
-
-   
-   
-   // Selecting necessary DOM elements
-    const captchaTextBox = document.querySelector(".captch_box input");
-    const refreshButton = document.querySelector(".refresh_button");
-    const captchaInputBox = document.querySelector(".captch_input input");
-    const message = document.querySelector(".message");
-    const submitButton = document.querySelector(".button");
-    
-    // Variable to store generated captcha
-    let captchaText = null;
-    
-    // Function to generate captcha
-    const generateCaptcha = () => {
-      const randomString = Math.random().toString(36).substring(2, 7);
-      const randomStringArray = randomString.split("");
-      const changeString = randomStringArray.map((char) => (Math.random() > 0.5 ? char.toUpperCase() : char));
-      captchaText = changeString.join("   ");
-      captchaTextBox.value = captchaText;
-      console.log(captchaText);
-    };
-    
-    const refreshBtnClick = () => {
-      generateCaptcha();
-      captchaInputBox.value = "";
-      captchaKeyUpValidate();
-    };
-    
-    const captchaKeyUpValidate = () => {
-      //Toggle submit button disable class based on captcha input field.
-      submitButton.classList.toggle("disabled", !captchaInputBox.value);
-    
-      if (!captchaInputBox.value) message.classList.remove("active");
-    };
-
-    const sendOtpButton = document.getElementById("sendOtpButton");
-
-// Add an event listener for the button
-sendOtpButton.addEventListener("click", (e) => {
-  e.preventDefault(); // Prevent default button behavior
-  submitBtnClick();   // Call captcha validation before proceeding
-});  
-    
-    // Function to validate the entered captcha
-const submitBtnClick = () => {
-  // Remove spaces from generated captcha text for validation
-  const sanitizedCaptchaText = captchaText
-    .split("")
-    .filter((char) => char !== " ")
-    .join("");
-    
-  // Activate the message box
-  message.classList.add("active");
-
-  // Check if the entered captcha text is correct
-  if (captchaInputBox.value === sanitizedCaptchaText) {
-    message.innerText = "Entered captcha is correct";
-    message.style.color = "#826afb";
-
-    // If captcha is correct, call the my_fun() function
-    my_fun();
-  } else {
-    message.innerText = "Entered captcha is not correct";
-    message.style.color = "#FF2525";
-
-    // Prevent proceeding if captcha is incorrect
-    alert("Entered captcha is not correct. Please try again.");
-  }
-};
-
-// Add event listeners for the refresh button, captchaInputBox, and submit button
-refreshButton.addEventListener("click", refreshBtnClick);
-captchaInputBox.addEventListener("keyup", captchaKeyUpValidate);
-submitButton.addEventListener("click", (e) => {
-  e.preventDefault(); // Prevent default behavior of the button
-  submitBtnClick();
-});
-
-// Generate a captcha when the page loads
-generateCaptcha();
-
-// Function to redirect to OTP page (called only when captcha is correct)
-function my_fun() {
-  const url = "otp.html";
-  window.open(url);
-}
-
-    
-    // Add event listeners for the refresh button, captchaInputBox, submit button
-    refreshButton.addEventListener("click", refreshBtnClick);
-    captchaInputBox.addEventListener("keyup", captchaKeyUpValidate);
-    submitButton.addEventListener("click", submitBtnClick);
-    
-    // Generate a captcha when the page loads
-    generateCaptcha();
-    
-    function my_fun(){
-   
-   const url="otp.html";
-   window.open(url);
-}
-    
-    </script>
+  </div>
+<script src="signup.js">  </script>
 </body>
 </html>

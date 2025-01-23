@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location Verification</title>
+  <link rel="stylesheet" href="location.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Location Verification</h1>
+    <p>Verify your location securely</p>
+  </header>
+  <main class="main-container">
+    <section class="location-section">
+      <h2>Verify Your Location</h2>
+      <p>Click the button below to retrieve your current location.</p>
+      <button id="verifyBtn">Get Location</button>
+      <div id="location-output" class="hidden">
+        <p id="address">Address: <span>-</span></p>
+        <p id="status">Status: <span>Waiting...</span></p>
+      </div>
+    </section>
+    <section class="action-section">
+      <button id="Next" class="button">Go for VOTE...</button>
+    </section>
+  </main>
+  <script src="location.js"></script>
+</body>
+</html>

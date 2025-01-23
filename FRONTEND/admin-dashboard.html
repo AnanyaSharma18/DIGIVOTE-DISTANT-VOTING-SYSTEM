@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="animated-header">ADMIN DASHBOARD</h1>
+    <div class="button-container">
+      <button class="dashboard-btn" id="btn-manage-voters" onclick="navigateTo('manage-voters.html')">Manage Voters</button>
+      <button class="dashboard-btn" id="btn-manage-elections" onclick="navigateTo('manage-elections.html')">Manage Elections</button>
+      <button class="dashboard-btn" id="btn-manage-candidates" onclick="navigateTo('manage-candidates.html')">Manage Candidates</button>
+      <button class="dashboard-btn" id="btn-votes" onclick="navigateTo('votes.html')">Votes</button>
+    </div>
+  </div>
+
+  <script src="admin-dashboard.js"></script>
+</body>
+</html>

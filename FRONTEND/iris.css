@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right,  #f4f4f4,  #f4f4f4);
+    color:  #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Header Styling */
+.header {
+    text-align: center;
+    padding: 1.5em; /* Reduced header padding */
+    background: #133b5c;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .header h1 {
+    font-size: 1.5em; /* Reduced header title font size */
+    margin: 0.2em 0;
+  }
+  
+  .header p {
+    font-size: 0.9em; /* Reduced subtitle font size */
+    margin: 0;
+  }
+  
+  /* Main Container */
+  .main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    margin-top: 60px;
+  }
+  
+  /* Camera Section */
+  .camera-section {
+    margin-top: 1em;
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Adjusted to be smaller */
+    height: 300px;   /* Adjusted to be smaller */
+    border: 2px solid #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #camera {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay .circle {
+    width: 120px;   /* Smaller circle */
+    height: 120px;  /* Smaller circle */
+    border: 3px solid #00f2fe;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  
+  .overlay .instruction {
+    margin-top: 1em;
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Status Section */
+  .status-section {
+    margin-top: 1em;
+    margin-bottom: 4em;
+    text-align: center;
+    font-size: 1em;  /* Reduced font size */
+    color: #e3f2fd;
+    background: #1c5d99;
+    padding: 0.5em;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  /* Button Styling */
+  .button {
+    margin-top: 10px;
+    padding: 0.8em 1.5em;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+  }
+  
+  .button:disabled {
+    background: #bbb;
+    cursor: not-allowed;
+  }
+  
+  .button:hover:enabled {
+    background: #45a049;
+  }
+  
+  /* Exit Button Styling */
+  .exit-button {
+    background: #f44336;
+    margin-left: 10px;
+  }
+  
+  .exit-button:hover {
+    background: #d32f2f;
+  }
+ 
+  /* Animations */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

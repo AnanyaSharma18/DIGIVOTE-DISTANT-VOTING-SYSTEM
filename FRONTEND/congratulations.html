@@ -4,39 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting ID</title>
-<style>
-      * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-    .heading{
-width: 100vw;
-height: 100vh;
-background-color: rgb(170, 170, 227);
-position: fixed;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
 
-    .h{
-        height: 200px;
-        width: 800px;
-        position: absolute;
-        top: 210px;
-        left: 350px;
-    }
-    
-    
-</style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            overflow: hidden;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 80%;
+            max-width: 700px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .container h1 {
+            font-size: 2.5rem;
+            color: #4c3c90;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .container p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .epic-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #6e8efb;
+            background-color: #e3e7fd;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 20px; /* Adds space between EPIC number and the button */
+        }
+
+        .exit-btn {
+            display: block; /* Ensures the button takes a new line */
+            padding: 10px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #4c3c90;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            margin-top: 20px; /* Adds space between the EPIC number and the Exit button */
+            width: 100%; /* Makes the button stretch across the container */
+        }
+
+        .exit-btn:hover {
+            background-color: #6e8efb;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="heading">
-        <div class="h">
-            <h1>Congratulations!🎉🎉 <br> 
-                you have completely verified! <br>
-                We are Providing your EPIC Number:
-                 </h1>
-        </div>
+    <div class="container">
+        <h1>Congratulations!</h1>
+        <p>You have successfully completed the verification process!</p>
+        <p>We are thrilled to provide you with your unique EPIC Number:</p>
+        <div class="epic-number">____________</div>
+        <!-- Exit Button on the next line -->
+        <button class="exit-btn" id="exitButton">Go to Login</button>
     </div>
+
+    <script>
+        // Get the exit button by its ID
+        const exitButton = document.getElementById("exitButton");
+
+        // Redirect to login page when the exit button is clicked
+        exitButton.addEventListener("click", function() {
+            window.location.href = "login.html"; // Replace with the actual login page filename
+        });
+    </script>
 </body>
 </html>

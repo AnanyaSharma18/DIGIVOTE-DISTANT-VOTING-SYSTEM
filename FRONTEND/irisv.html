@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iris Recognition</title>
+  <link rel="stylesheet" href="irisv.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Iris Recognition</h1>
+  </header>
+  <main class="main-container">
+    <section class="camera-section">
+      <div class="camera">
+        <video id="cameraFeed" autoplay muted></video>
+        <div class="iris-overlay"></div>
+      </div>
+      <p id="statusMessage">Position your eyes within the circle for recognition...</p>
+    </section>
+    <section class="action-section">
+      <button id="verifiedButton" class="disabled" disabled>Verified</button>
+    </section>
+</main>
+  <script src="irisv.js"></script>
+</body>
+</html>

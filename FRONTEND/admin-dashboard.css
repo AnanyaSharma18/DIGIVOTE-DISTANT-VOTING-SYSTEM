@@ -1,0 +1,70 @@
+/* General body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  text-align: center;
+}
+
+/* Animated Header */
+.animated-header {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  animation: slide-in 1.5s ease-out;
+}
+
+/* Header Animation */
+@keyframes slide-in {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Buttons */
+.dashboard-btn {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  color: white;
+  background: #007bff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.dashboard-btn:hover {
+  transform: translateY(-5px);
+  background: #0056b3;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}

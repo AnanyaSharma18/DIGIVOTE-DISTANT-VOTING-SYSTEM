@@ -17,9 +17,10 @@
         <li><a href="#section4">Contact Details</a></li>
         <li><a href="#section5">Aadhaar Details</a></li>
         <li><a href="#section6">Gender</a></li>
-        <li><a href="#section7">Personal Addres</a></li>
+        <li><a href="#section7">Permanent Address</a></li>
         <li><a href="#section8">Present Address</a></li>
-        <li><a href="#section9">Remote Eligiblelity</a></li>
+        <li><a href="#section9">Remote Eligibility</a></li>
+        <li><a href="#section10">EPIC Number</a></li>
       </ul>
     </div>
 
@@ -27,74 +28,65 @@
     <div class="form-sections">
       <div class="heading" style="font-size: 14px; text-decoration: underline; text-align: center;">
         <h1>Application form For new Voters</h1></div>
-      <section id="section1">
-        <h2>Select State, District </h2>
-        <p>Form fields for State, District selection go here.</p>
-        <div class="buttons" >
-          
-         <div class="input1" style="display: flex; align-items: center; justify-content: space-around;">
-          <div class="coolinput""> 
-            <label for="input" class="text">State:</label>
-            <input type="text" placeholder="Write here..." name="input" class="input">
-        </div>
-        <div class="coolinput">
-          <label for="input" class="text">District:</label>
-          <input type="text" placeholder="Write here..." name="input" class="input">
-      </div>
-      <div class="buttons">
-        <button class="save-btn">Save</button>
-        <button class="next-btn" data-next="section2">Next</button>
-      </div>
-         </div>
-        </div>
+        <section id="section1">
+          <h2>Select State, District</h2>
+          <p>Select your State and District from the dropdown menus.</p>
+          <div class="dropdown-container ">
+            <label for="stateDropdown" id="state">State:</label>
+            <select id="stateDropdown" class="dropdown" onchange="populateDistricts()" id="district">
+              <option value="">--Select State--</option>
+            </select>
         
-      </section>
+            <label for="districtDropdown">District:</label>
+            <select id="districtDropdown" class="dropdown">
+              <option value="">--Select District--</option>
+            </select>
+          </div>
+          <div class="buttons" >
+            <button class="save-btn" data-section="state_district" style="margin-left:650px;">Save</button>
+            <button class="next-btn" data-next="section2" style="margin-right:90px;">Next</button>
+          </div>
+        </section>
 
 
 
       <section id="section2">
         <h2>Personal Details</h2>
         <p>Form fields for Personal Details go here.</p>
-        <div class="buttons" >
+        <div class="buttons " >
           
-         <div class="input2" style="display: flex; align-items: center; justify-content: space-around;">
-          <div class="coolinput""> 
-            <label for="input" class="text">Name:</label>
-            <input type="text" placeholder="Write here..." name="input" class="input">
-        </div>
-        <div class="container1"style="background-color: white;" >
+         <div class="input2" style="display: flex; align-items: center; justify-content: space-around; margin-bottom: 50px;">
+          <div class="coolinput   " style=" margin-left: 20px; "> 
+            <label for="name" class="text">Full Name:</label>
+            <input type="text" id="name" placeholder="Write here..." name="name" class="input">
+          </div>
+          
+        <div class="container1" style="background-color: white; margin-left: 50px;" >
           <form >
             <label class="label1" for="arquivo">Upload your Photo:</label>
             <input accept=".jpg, .jpeg, .png, .gif, .pdf" class="inpdddut" name="arquivo" id="arquivo" type="file">
 
           </form>
         </div>
-      <div class="buttons">
-        <button class="save-btn">Save</button>
+      <div class="buttons" style=" margin-left: 180px;">
+        <button class="save-btn" data-section="prsnl_info">Save</button>
         <button class="next-btn" data-next="section3">Next</button>
       </div>
          </div>
         </div>
-      <section id="section3">
-        <h2>Date of Birth</h2>
-        <p>Form fields for Date of Birth go here.</p>
-        <div class="buttons" >
-          
-          <div class="input7" style="display: flex; align-items: center; justify-content: space-between; " >
-           <div class="coolinput"  style="margin-left: 70px;"> 
-             <label for="input" class="text">DOB:</label>
-             <input type="phone" placeholder="Write here..." name="input" class="input">
-         </div>
-    
-       <div class="buttons" style="margin-right: 50px;">
-        <button class="save-btn">Save</button>
-        <button class="next-btn" data-next="section4">Next</button>
-      </div>
-          </div>
-         </div>
-      
-      </section>
-
+        
+        <section id="section3">
+            <h2>Date of Birth</h2>
+            <p>Select your Date of Birth using the calendar below.</p>
+            <div class="date-container coolinput">
+              <label for="dob" class="text">DOB:</label>
+              <input type="date" id="dob" class="date-picker input" style="border: 2px  #007bff solid;background: #e8e8e8;">
+            </div>
+            <div class="buttons" >
+              <button class="save-btn" data-section="dob" style="margin-left:570px;">Save</button>
+              <button class="next-btn" data-next="section4" style="margin-right:120px;">Next</button>
+            </div>
+          </section>
 
       
       <section id="section4">
@@ -103,16 +95,17 @@
         <div class="buttons" >
           
           <div class="input4" style="display: flex; align-items: center; justify-content: space-around;">
-           <div class="coolinput""> 
-             <label for="input" class="text">Phone Number:</label>
-             <input type="phone" placeholder="Write here..." name="input" class="input">
-         </div>
-         <div class="coolinput">
+            <div class="coolinput"> 
+              <label for="phonenumber" class="text">Phone Number:</label>
+              <input type="tel" id="phonenumber" placeholder="Enter your phone number" name="phonenumber" class="input">
+            </div>
+            
+         <div class="coolinput" style="margin-left: 50px;">
            <label for="input" class="text">Email:</label>
            <input type="email" placeholder="Write here..." name="input" class="input">
        </div>
-       <div class="buttons" style="margin-left: 100px;">
-        <button class="save-btn">Save</button>
+       <div class="buttons" style="margin-left: 100px; margin-left: 160px;">
+        <button class="save-btn" data-section="ph_no">Save</button>
         <button class="next-btn" data-next="section5">Next</button>
        </div>
           </div>
@@ -128,96 +121,90 @@
         <div class="buttons" >
           
           <div class="input1" style="display: flex; align-items: center; justify-content: space-between; " >
-           <div class="coolinput"  style="margin-left: 70px;"> 
-             <label for="input" class="text">Adhar Number:</label>
+           <div class="coolinput" > 
+             <label for="input" class="text" id="aadhaar">Aadhaar Number:</label>
              <input type="phone" placeholder="Write here..." name="input" class="input">
          </div>
     
-       <div class="buttons" style="margin-right: 50px;">
-        <button class="save-btn">Save</button>
+       <div class="buttons" style="margin-left: 450px;">
+        <button class="save-btn" data-section="Aadhaar">Save</button>
         <button class="next-btn" data-next="section6">Next</button>
       </div>
           </div>
          </div>
        
-      </section>
+      </section> 
       <section id="section6">
         <h2>Gender</h2>
-        <p>Form fields for Gender selection go here.</p>
+        <p>Select your gender:</p>
         <div class="input6" style="display: flex; align-items: center; justify-content: space-between;">
           <div class="radio-buttons-container" style="margin-left: 70px;">
             <div class="radio-button">
-              <input name="radio-group" id="radio2" class="radio-button__input" type="radio">
-              <label for="radio2" class="radio-button__label">
-                <span class="radio-button__custom"></span>
-                    
-                   Male
+              <input name="radio-group" id="radio-male" value="Male" class="radio-button__input" type="radio">
+              <label for="radio-male" class="radio-button__label">
+                <span class="radio-button__custom"></span> Male
               </label>
             </div>
             <div class="radio-button">
-              <input name="radio-group" id="radio1" class="radio-button__input" type="radio">
-              <label for="radio1" class="radio-button__label">
-                <span class="radio-button__custom"></span>
-                
-                Female
+              <input name="radio-group" id="radio-female" value="Female" class="radio-button__input" type="radio">
+              <label for="radio-female" class="radio-button__label">
+                <span class="radio-button__custom"></span> Female
               </label>
             </div>
             <div class="radio-button">
-              <input name="radio-group" id="radio3" class="radio-button__input" type="radio">
-              <label for="radio3" class="radio-button__label">
-                <span class="radio-button__custom"></span>
-                    
-                   Other
+              <input name="radio-group" id="radio-other" value="Other" class="radio-button__input" type="radio">
+              <label for="radio-other" class="radio-button__label">
+                <span class="radio-button__custom"></span> Other
               </label>
             </div>
-            </div>
-            <div class="buttons" style="margin-right: 50px;">
-              <button class="save-btn">Save</button>
-              <button class="next-btn" data-next="section7">Next</button>
-            </div>
+          </div>
+          <div class="buttons" style="margin-right: 10px;">
+            <button class="save-btn" data-section="gender">Save</button>
+            <button class="next-btn" data-next="section7">Next</button>
+          </div>
         </div>
-       
       </section>
+      
       <section id="section7">
-        <h2>Personal Addres</h2>
-        <p>Form fields for Personal Details go here.</p>
+        <h2>Permanent Address</h2>
+        <p>Form fields for Permanent Details go here.</p>
         <div class="buttons" >
           
           <div class="input7" style="display: flex; align-items: center; justify-content: space-around;">
             <div class="coolinput1" style=" display: flex;flex-direction: column; width:700px;   position: static;"> 
-              <label for="input" class="text">Personal Addres: </label>
+              <label for="input" class="text" id="perm_add">Permanent Addres: </label>
               <input type="text" placeholder="Write here..." name="input" class="input" style="height: 60px;">
           </div>
           
-       <div class="buttons">
-        <button class="save-btn">Save</button>
+       <div class="buttons" style="margin-left: 10px;">
+        <button class="save-btn" data-section="perm_add">Save</button>
         <button class="next-btn" data-next="section8">Next</button>
        </div>
           </div>
          </div>
       </section>
       <section id="section8">
-        <h2>Present Address</h2>
-        <p>Form fields for Present Address go here.</p>
+        <h2>Current Address</h2>
+        <p>Form fields for Current Address go here.</p>
         <div class="buttons" >
           
           <div class="input8" style="display: flex; align-items: center; justify-content: space-around;">
             <div class="coolinput1" style=" display: flex;flex-direction: column; width:700px;   position: static;"> 
-              <label for="input" class="text">Relatives Address: </label>
+              <label for="input" class="text" id="curr_Add">Current Address: </label>
               <input type="text" placeholder="Write here..." name="input" class="input" style="height: 60px;">
           </div>
           
-       <div class="buttons">
-        <button class="save-btn">Save</button>
-        <button class="next-btn" data-next="section4">Next</button>
+       <div class="buttons" style="margin-left: 10px;">
+        <button class="save-btn" data-section="curr_Add">Save</button>
+        <button class="next-btn" data-next="section9">Next</button>
        </div>
           </div>
          </div>
       
       </section>
       <section id="section9">
-        <h2>Remote Eligiblelity</h2>
-        <p>Form fields for Remote Eligiblelity go here.</p>
+        <h2>Remote Eligibility</h2>
+        <p>Form fields for Remote Eligibility go here.</p>
         <div class="input9" style="display: flex; align-items: center; justify-content: space-between;">
           <div class="radio-buttons-container1" style="margin-left: 70px;">
             <div class="radio-button1">
@@ -246,12 +233,13 @@
             </div>
             </div>
             <div class="buttons" style="margin-right: 50px;">
-              <button class="save-btn">Save</button>
+              <button class="save-btn" data-section="rem_el">Save</button>
+              <button class="next-btn" data-next="section10">Next</button>
              
             </div>
         </div>
 
-      <div class="f1" style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 40px;">
+       <div class="f1" style="display: flex; align-items: center; justify-content: space-evenly; margin-top: 40px;">
         <div class="h1"><h1 style="font-weight: bold;">
           Prooffed Document:
         </h1>
@@ -274,10 +262,23 @@
             <input accept=".jpg, .jpeg, .png, .gif, .pdf" class="inpdddut" name="arquivo" id="arquivo" type="file">
 
           </form>
-        </div>
       </div>
-    
       </section>
+      <section id="section10">
+        <h2>EPIC Number</h2>
+        <p>Form fields for EPIC Number go here.</p>
+        <div class="buttons" >
+          <div class="input2" style="display: flex; align-items: center; justify-content: space-around;">
+            <div class="coolinput""> 
+              <label for="input" class="text">EPIC Number:</label>
+              <input type="phone" placeholder="Write here..." name="input" class="input">
+          </div>
+       
+            <div class="buttons" style="margin-left: 50px;">
+              <button class="save-btn" data-section="epic_num">Save</button>
+            </div>
+    
+  </section>
 
       <button style="margin-left: 500px;" onclick="my_fun()">
         <span class="circle1"></span>
@@ -289,6 +290,6 @@
     </button>
     </div>
   </div>
-  <script src="tab1.js">    </script>
+  <script src="tab1.js"></script>
 </body>
 </html>

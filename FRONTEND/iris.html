@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iris Recognition</title>
+  <link rel="stylesheet" href="iris.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Iris Recognition</h1>
+    <p>Align your face with the circle for recognition</p>
+  </header>
+
+  <main class="main-container">
+    <!-- Camera Section -->
+    <section class="camera-section">
+      <video id="camera" autoplay></video>
+      <div class="overlay">
+        <div class="circle"></div>
+        <p class="instruction">Align your eyes with the circle</p>
+      </div>
+    </section>
+
+    <!-- Status Section -->
+    <section class="status-section">
+      <p id="status">Status: Waiting for face alignment...</p>
+      <button id="locationBtn" class="button" disabled>Go to Location Page</button>
+  
+    </section>
+  </main>
+
+  
+
+  <script src="iris.js"></script>
+</body>
+</html>
