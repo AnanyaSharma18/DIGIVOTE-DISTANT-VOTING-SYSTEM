@@ -1,7 +1,4 @@
-# Blockchain Voting Platform
-
-## Overview
-The Blockchain Voting Platform is a decentralized application designed to facilitate secure, transparent, and accountable remote voting. Utilizing blockchain technology, this platform ensures that votes are immutable, verifiable, and securely recorded.
+# Blockchain Working
 
 ## Features
 - **Voter Registration and Authentication**: Secure mechanisms for voter registration and authentication, preventing duplicate registrations and ensuring privacy.
