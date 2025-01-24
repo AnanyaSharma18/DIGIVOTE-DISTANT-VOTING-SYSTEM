@@ -89,9 +89,9 @@ For more information, queries, or feedback, please reach out to:
 
 This repository is dual-licensed under the following licenses:
 
-1. **[MIT License](./LICENSE)**: A permissive license allowing free use, modification, and distribution with minimal restrictions.
-2. **[GNU AGPL-3.0 License](./LICENSE_AGPL)**: A more restrictive license ensuring that derivative works and hosted services remain open source.
+1.  **[GNU AGPL-3.0 License](./LICENSE_AGPL)**: A more restrictive license ensuring that derivative works and hosted services remain open source.
 
 You may use this project under the terms of either license.
 
+---
 Together, let's shape the future of democratic participation.
