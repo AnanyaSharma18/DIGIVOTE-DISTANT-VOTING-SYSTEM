@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Distant Voting System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #0056b3;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #0056b3;
+            margin-bottom: 15px;
+        }
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .contact-form button {
+            background: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+        .info {
+            margin: 20px 0;
+        }
+        .info p {
+            margin: 10px 0;
+        }
+        footer {
+            background: #0056b3;
+            color: #333;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <div class="container">
+        <h2>Get in Touch</h2>
+        <p>
+            We value your feedback and inquiries. If you have any questions, concerns, or suggestions, please feel free to reach out to us using the form below or through the contact details provided.
+        </p>
+
+        <div class="contact-form">
+            <form action="submit_contact.php" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="info">
+            <h2>Contact Information</h2>
+            <p><strong>Email:</strong> support@distantvoting.com</p>
+            <p><strong>Phone:</strong> +1-800-555-1234</p>
+            <p><strong>Address:</strong> 123 Voting Lane, Democracy City, DC 45678</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Distant Voting System. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
