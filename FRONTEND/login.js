@@ -16,14 +16,14 @@
     // Validate email/phone number format (simple regex example)
     const emailOrMobileRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!emailOrMobileRegex.test(emailOrMobile) && !/^\d{10}$/.test(emailOrMobile)) {
-        alert('Please enter a valid email or phone number.');
+        alert('Please enter a valid email');
         return;
     }
 
     // Validate EPIC number format (example)
     const epicNumberRegex = /^[A-Za-z0-9]{10}$/; // Assuming EPIC is alphanumeric with 10 characters
     if (!epicNumberRegex.test(epicNumber)) {
-        alert('Please enter a valid EPIC number.');
+        alert('Please enter a valid DV number.');
         return;
     }
 
