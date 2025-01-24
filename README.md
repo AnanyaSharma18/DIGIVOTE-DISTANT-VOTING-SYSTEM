@@ -1,4 +1,4 @@
-# Distant Voting System
+# DIGIVOTE: Distant Voting System
 
 ## Vision
 To create a secure, accessible, and efficient digital platform that enables voters to cast their votes remotely with confidence, fostering democratic participation for all, irrespective of location or physical constraints.
