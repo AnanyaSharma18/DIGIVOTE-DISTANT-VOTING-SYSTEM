@@ -31,22 +31,7 @@ blockchain-voting-platform
 ├── go.mod
 └── README.md
 ```
-
-## Setup Instructions
-1. **Clone the Repository**: Clone this repository to your local machine.
-2. **Install Dependencies**: Navigate to the project directory and run `npm install` to install necessary dependencies.
-3. **Configure Network**: Update the `configtx.yaml` and `crypto-config.yaml` files as needed for your network configuration.
-4. **Start the Network**: Use the `docker-compose.yaml` file to start the Hyperledger Fabric network.
-5. **Deploy Chaincode**: Run the `deployChaincode.sh` script to deploy the chaincode to the network.
-6. **Invoke Chaincode**: Use the `invokeChaincode.sh` script to interact with the deployed chaincode.
-
 ## Usage
 - Voters can register and authenticate using the provided functionalities in the chaincode.
 - Votes can be cast securely, ensuring anonymity and integrity.
 - Election administrators can manage elections and view results through the provided tools.
-
-## Contributing
-Contributions are welcome! Please submit a pull request or open an issue for any enhancements or bug fixes.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
