@@ -1,0 +1,61 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f4f4f4, #f4f4f4);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    background: #2c3e50;
+    padding: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Section Styling */
+.main-container {
+    flex: 1;
+    padding: 2em;
+}
+
+/* Table Section Styling */
+.table-section {
+    text-align: center;
+}
+
+.table-section h2 {
+    margin-bottom: 1em;
+    color: #34495e;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 90%;
+    background: #fff;
+    color: #333;
+}
+
+table th, table td {
+    padding: 1em;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background: #1c5d99;
+    color: #fff;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 1em;
+    background: #2c3e50;
+}

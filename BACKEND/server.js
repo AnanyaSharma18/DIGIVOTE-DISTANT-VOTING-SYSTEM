@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
-mongoose.connect('mongodb://172.19.133.8:27017/Distant_Voting')
+mongoose.connect('mongodb://127.0.0.1:27017/dis_vote_db')
 .then(() => {
     console.log('Connected to MongoDB!');
 })
@@ -44,7 +44,8 @@ app.post("/api/send-otp", async (req, res) => {
   }
 });
 
-// API endpoint to handle registration data
+
+
 app.post("/save-details", async (req, res) => {
   const {
     state,
@@ -73,65 +74,75 @@ app.post("/save-details", async (req, res) => {
       throw new Error("Database collections are not accessible.");
     }
 
-    // Check if the phoneNumber exists in the database for user_details
-  const existingUser = await userDetails.findOne({ phoneNumber });
+    // Check if the phoneNumber exists in the 'user_details' collection
+    const existingUser = await userDetails.findOne({ phoneNumber });
 
-  if (!existingUser) {
-    return res.status(400).json({
-      success: false,
-      message: "The entered phone number does not match any existing record in 'user_details'.",
-    });
-  }
+    if (!existingUser) {
+      return res.status(400).json({
+        success: false,
+        message: "The entered phone number does not match any existing record in 'user_details'.",
+      });
+    }
 
-  // Insert user details into the 'user_details' collection
-  const userResult = await userDetails.insertOne({
-    name,
-    dob,
-    gender,
-    aadhaar,
-    remoteEligibility,
-    epic_num,
-  });
+    // Update user details in the 'user_details' collection
+    const userUpdateResult = await userDetails.updateOne(
+      { phoneNumber }, // Find by phone number
+      {
+        $set: {
+          name,
+          dob,
+          gender,
+          aadhaar,
+          remoteEligibility,
+          epic_num,
+        },
+      }
+    );
 
-  if (!userResult.acknowledged) {
-    throw new Error("Failed to insert user details.");
-  }
+    if (!userUpdateResult.matchedCount) {
+      throw new Error("Failed to update user details.");
+    }
 
-  // Check if the phoneNumber exists in the database for user_address
-  const existingAddress = await userAddress.findOne({ phoneNumber });
+    // Check if the phoneNumber exists in the 'user_address' collection
+    const existingAddress = await userAddress.findOne({ phoneNumber });
 
-  if (!existingAddress) {
-    return res.status(400).json({
-      success: false,
-      message: "The entered phone number does not match any existing record in 'user_address'.",
-    });
-  }
+    if (!existingAddress) {
+      return res.status(400).json({
+        success: false,
+        message: "The entered phone number does not match any existing record in 'user_address'.",
+      });
+    }
 
-  // Insert address details into the 'user_address' collection
-  const addressResult = await userAddress.insertOne({
-    state,
-    phoneNumber,
-    district,
-    presentAddress,
-    permanentAddress,
-  });
+    // Update address details in the 'user_address' collection
+    const addressUpdateResult = await userAddress.updateOne(
+      { phoneNumber }, // Find by phone number
+      {
+        $set: {
+          state,
+          district,
+          presentAddress,
+          permanentAddress,
+        },
+      }
+    );
 
-  if (!addressResult.acknowledged) {
-    throw new Error("Failed to insert address details.");
-  }
+    if (!addressUpdateResult.matchedCount) {
+      throw new Error("Failed to update address details.");
+    }
 
     // Return success response
-    res.status(201).json({ success: true, message: "Data saved successfully!" });
+    res.status(200).json({ success: true, message: "Data updated successfully!" });
   } catch (error) {
-    console.error("Error saving data:", error);
+    console.error("Error updating data:", error);
 
     // Return error response
     res.status(500).json({
       success: false,
-      message: "An error occurred while saving data. Please try again later.",
+      message: "An error occurred while updating data. Please try again later.",
     });
   }
 });
+
 
 // Endpoint to check login details
 app.post("/api/login", async (req, res) => {
@@ -156,8 +167,49 @@ app.post("/api/login", async (req, res) => {
   }
 });
  
+// Endpoint to fetch selected fields from all collections
+app.get("/api/users", async (req, res) => {
+  try {
+    // Access the database collections
+    const usersCollection = mongoose.connection.collection("users");
+    const userDetailsCollection = mongoose.connection.collection("user_details");
+    const userAddressCollection = mongoose.connection.collection("user_address");
+
+    // Fetch all users from the `users` collection
+    const users = await usersCollection.find({}, { projection: { email: 1, phoneNumber: 1, _id: 0 } }).toArray();
+
+    // Fetch all details from the `user_details` collection
+    const userDetails = await userDetailsCollection.find({}, { projection: { name: 1, dob: 1, phoneNumber: 1, _id: 0 } }).toArray();
+
+    // Fetch all addresses from the `user_address` collection
+    const userAddresses = await userAddressCollection.find({}, { projection: { state: 1, district: 1, phoneNumber: 1, _id: 0 } }).toArray();
+
+    // Combine data from all collections based on phoneNumber
+    const combinedData = users.map((user) => {
+      const details = userDetails.find((detail) => detail.phoneNumber === user.phoneNumber);
+      const address = userAddresses.find((addr) => addr.phoneNumber === user.phoneNumber);
+
+      return {
+        email: user.email,
+        phoneNumber: user.phoneNumber,
+        name: details?.name || null,
+        dob: details?.dob || null,
+        state: address?.state || null,
+        district: address?.district || null,
+      };
+    });
+
+    // Send the combined data to the frontend
+    res.status(200).json({ success: true, data: combinedData });
+  } catch (error) {
+    console.error("Error fetching user details:", error);
+    res.status(500).json({ success: false, message: "An error occurred. Please try again later." });
+  }
+});
+
+
 
 // Start the server
-app.listen(PORT, '172.19.133.8', () => {
-  console.log(`Server is running on http://172.19.133.8:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

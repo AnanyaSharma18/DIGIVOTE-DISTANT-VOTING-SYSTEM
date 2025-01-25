@@ -206,7 +206,7 @@ async function my_fun() {
   const dob = document.getElementById('dob')?.value || null;
   const phoneNumber = document.getElementById('phonenumber')?.value || null;
   const aadhaar = document.getElementById('aadhaar')?.value || null;
-  const gender = document.querySelector('input[name="radio-group"]:checked')?.value || null;
+  const gender = document.querySelector('input[name="radio-group"]:checked')?.value || null;;
   const permanentAddress = document.querySelector('.input7 .input')?.value || null;
   const presentAddress = document.querySelector('.input8 .input')?.value || null;
   const remoteEligibility = document.querySelector('input[name="radio-group"]:checked') ? true : false;
