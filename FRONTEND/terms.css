@@ -1,0 +1,132 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #0066ff, #00ccff);
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Page Header */
+.main-header {
+    width: 90%;
+    max-width: 1200px; /* Wide enough for large screens */
+    background: linear-gradient(to right, #0033cc, #141f2b);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.main-header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Terms Container */
+.terms-container {
+    width: 90%;
+    max-width: 1200px; /* Maximized width for better layout */
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.sub-heading {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Terms Box */
+.terms-box {
+    text-align: left;
+    border: 2px solid #007BFF;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #007BFF;
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Confirmation Checkbox */
+.confirm-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.confirm-label input {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Proceed Button */
+button {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ccc;
+    color: #333;
+    font-weight: bold;
+    cursor: not-allowed;
+    transition: 0.3s;
+}
+
+/* Active Button */
+button:enabled {
+    background: linear-gradient(to right, #28a745, #00cc66);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 255, 100, 0.5);
+    transform: scale(1.05);
+}
+
+button:enabled:hover {
+    background: linear-gradient(to right, #218838, #00994d);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

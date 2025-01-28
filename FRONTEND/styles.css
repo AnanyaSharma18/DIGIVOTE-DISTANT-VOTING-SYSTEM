@@ -30,10 +30,14 @@ h1, h2, h3 {
     gap: 10px; /* Space between the logo and heading */
   }
   
+ 
   .navbar-logo img {
-    height: 80px; /* Adjust size as needed */
-    width: auto;
+    height: 100px; /* Adjust size as needed */
+    width: 100px; /* Make width equal to height for a perfect circle */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fills the circular area */
   }
+  
   
   .navbar-logo h1 {
     font-size: 1.8rem;
@@ -60,7 +64,7 @@ h1, h2, h3 {
 .navbar-menu a {
     text-decoration: none;
     color: white;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     padding: 10px 15px;
     border-radius: 5px;
@@ -329,9 +333,9 @@ h1, h2, h3 {
     background: white;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 20px;
+    padding: 40px;
     margin: 20px auto;
-    max-width: 600px;
+    max-width: 100%;
     text-align: left;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -384,7 +388,6 @@ h1, h2, h3 {
     }
 }
 
-/* Enhanced Services Section */
 .services {
     padding: 60px 20px;
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
@@ -400,10 +403,17 @@ h1, h2, h3 {
     letter-spacing: 1px;
 }
 
+.services-container {
+    display: flex; /* Make the container a flexbox */
+    justify-content: space-around; /* Space the items evenly */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px; /* Add spacing between items */
+}
+
 .service {
-    display: inline-block;
-    width: 45%;
-    margin: 20px 2.5%;
+    flex: 0 1 calc(45% - 20px); /* Flex for 2 items per row with a gap */
+    max-width: 45%; /* Ensure it doesn't exceed half the row width */
+    margin: 20px 0; /* Vertical spacing between rows */
     padding: 30px;
     background: #ffffff;
     border: 1px solid #ddd;
@@ -412,7 +422,6 @@ h1, h2, h3 {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     border-top: 5px solid #1c5d99;
-    justify-content: space-between; 
 }
 
 .service h3 {
@@ -427,6 +436,9 @@ h1, h2, h3 {
     color: #555;
     line-height: 1.5;
 }
+.service:hover {
+    transform: translateY(-5px);
+}
 
 .service button {
     margin-top: 20px;
@@ -440,7 +452,7 @@ h1, h2, h3 {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: background 0.3s, transform 0.3s;
-    align-self: center; /* Centers the button horizontally */
+    align-self: center;
 }
 
 .service button:hover {
@@ -450,11 +462,16 @@ h1, h2, h3 {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+    .services-container {
+        flex-direction: column; /* Stack items vertically */
+    }
+
     .service {
-        width: 90%;
-        margin: 20px auto;
+        flex: 1 1 100%; /* Full width on smaller screens */
+        max-width: 100%;
     }
 }
+
 
 
 
@@ -463,145 +480,571 @@ h1, h2, h3 {
 .tags {
     text-align: center;
     margin: 40px auto;
-    padding: 40px;
-    background: #ebe7e7;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    padding: 50px;
+    background: linear-gradient(135deg, #f5f7fa, #ccd3df);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
 }
 
 .tags h2 {
-    font-size: 2rem;
-    margin-bottom: 25px;
-    color: #d0c9c9;
-    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #4a5568;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
 .tags-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px; /* Increased gap between tags */
-    margin-top: 10px;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .tags p {
     display: inline-block;
-    padding: 14px 25px;
-    background: white;
-    color: #333;
-    font-size: 14px;
-    font-weight: 500;
-    border: 1px solid #d6e0f5;
-    border-radius: 20px;
-    transition: all 0.3s ease;
+    padding: 15px 30px;
+    background: #ffffff;
+    color: #2d3748;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #edf2f7;
+    border-radius: 25px;
+    transition: all 0.4s ease;
     cursor: pointer;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .tags p:hover {
-    background: #d6e4fc;
-    color: #1a73e8;
-    transform: scale(1.05);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    background: #edf2f7;
+    color: #3182ce;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Layout */
 @media (min-width: 768px) {
     .tags p {
-        font-size: 16px;
-        padding: 16px 30px; /* Slightly increased padding for larger screens */
+        font-size: 18px;
+        padding: 18px 35px;
+    }
+}
+/* Statistics Section Styles */
+.statistics {
+    padding: 20px 10px;
+    background: linear-gradient(135deg, #c7cfdc, #a4b1c7); /* Subtle light background */
+    text-align: center;
+    margin: 60px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Lighter shadow for a softer look */
+    max-width: 1200px;
+    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+    position: relative;
+}
+
+/* Hover effect for the statistics section */
+.statistics:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Soft hover shadow for depth */
+}
+
+/* Section Heading */
+.statistics h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    padding-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.statistics h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #130c58; /* Bold accent color for emphasis */
+    transform: scaleX(0);
+    transition: transform 0.4s ease-out;
+}
+
+.statistics h2:hover::before {
+    transform: scaleX(1); /* Expand underline on hover */
+}
+
+/* Stat Container */
+.stat {
+    display: inline-block;
+    margin: 20px;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Increased shadow depth */
+    width: 240px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Stat hover effect */
+.stat:hover {
+    transform: translateY(-12px); /* Bold lift effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Bolder shadow on hover */
+}
+
+.stat:hover .stat-icon {
+    transform: scale(1.3); /* Zoom in the icon for an impactful effect */
+}
+
+.stat .stat-icon {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #101366; /* Accent color for a pop */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Stat Heading */
+.stat h3 {
+    font-size: 1.9rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Stat Description */
+.stat p {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 600;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+/* Hover animation effect on stat description */
+.stat:hover p {
+    color: #2c106d; /* Change text color to accent color on hover */
+    transform: scale(1.05); /* Small zoom effect on text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .statistics {
+        padding: 40px 20px;
+        margin: 40px 10px;
+    }
+
+    .statistics h2 {
+        font-size: 2.2rem; /* Adjust font size for mobile */
+    }
+
+    .stat {
+        width: 180px; /* Slightly smaller for mobile */
+        margin-bottom: 25px;
+    }
+
+    .stat h3 {
+        font-size: 1.5rem;
+    }
+
+    .stat p {
+        font-size: 1rem;
     }
 }
 
 
-
-/* Statistics Section Styles */
-.statistics {
-    padding: 40px 20px;
-    background-color: #ebe7e7;
+/* Section Container */
+.getting-started-section {
+    background: linear-gradient(135deg, #c69dd7, #90b3ca); /* Vibrant Gradient Background */
+    padding: 20px 10px; /* Reduced padding for smaller height */
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    margin: 30px 0; /* Reduced margin */
     text-align: center;
-    margin: 40px auto;
-    padding: 40px;
-    background: #ebe7e7;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
 }
 
-.statistics h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+.getting-started-section:hover {
+    transform: scale(1.02);
 }
 
-.stat {
-    display: inline-block;
-    margin: 10px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 150px;
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.stat h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+/* Section Heading */
+.section-heading {
+    font-size: 2.3rem; /* Slightly smaller font size */
+    font-weight: bold;
+    margin-bottom: 30px; /* Reduced margin bottom */
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer Section */
-.footer {
-    background: #133b5c;
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
-}
-
-.footer-container {
+/* Steps Container */
+.steps-container {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.footer-logo h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+/* Individual Step */
+.step {
+    text-align: center;
+    flex: 1;
+    max-width: 200px; /* Reduced max-width */
+    margin: 15px; /* Reduced margin */
+    transition: transform 0.3s ease;
 }
 
-.footer-links {
-    display: flex;
-    gap: 20px;
+.step:hover {
+    transform: translateY(-5px);
 }
 
-.footer-links .link-column {
-    margin-right: 20px;
+/* Icon Wrapper */
+.icon-wrapper {
+    background: #fff;
+    border-radius: 50%;
+    padding: 20px; /* Reduced padding */
+    margin-bottom: 15px; /* Reduced margin bottom */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    margin-bottom: 10px;
-    display: block;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: #007bff;
-}
-
-.footer-social .social-icons a img {
-    width: 30px;
-    margin-right: 10px;
-    transition: transform 0.3s;
-}
-
-.footer-social .social-icons a:hover img {
+.icon-wrapper:hover {
+    background-color: #3498db;
     transform: scale(1.1);
 }
 
+.icon-wrapper img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.icon-wrapper:hover img {
+    transform: scale(1.1);
+}
+
+/* Step Title */
+.step h3 {
+    font-size: 1.2rem; /* Slightly smaller font size */
+    margin-top: 10px; /* Reduced top margin */
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.step:hover h3 {
+    color: #d3dde3;
+}
+
+/* Arrow Styling */
+.arrow {
+    font-size: 2.2rem; /* Reduced font size */
+    color: #fff;
+    margin: 0 15px; /* Reduced margin */
+    transition: color 0.3s ease;
+}
+
+.arrow:hover {
+    color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .step {
+        margin-bottom: 20px; /* Adjusted margin for mobile */
+    }
+
+    .section-heading {
+        font-size: 1.8rem; /* Slightly smaller heading for mobile */
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #133b5c;
+    color: #fff;
+    padding: 15px 10px;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Footer Logo Section */
+.footer-logo {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-logo h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 18px;
+    color: #b3b3b3;
+}
+
+/* Footer Sections */
+.footer-sections {
+    display: flex;
+    flex: 3;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 180px;
+    margin: 10px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    white-space: nowrap; /* Prevents text from breaking */
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #b3b3b3;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #63ccd8;
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    transition: 0.3s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+/* Sign-Up Button */
+.sign-up {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sign-up:hover {
+    background-color: #e6b800;
+}
+
+/* Footer Bottom */
 .footer-bottom {
+    text-align: center;
     margin-top: 20px;
-    font-size: 0.9rem;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+/* Chatbot Container */
+.chatbot-container {
+    position: fixed;
+    bottom: 30px; /* Position from the bottom */
+    right: 30px; /* Position from the right */
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #4e8ef7, #1e3da3); /* Gradient for a modern look */
+    border-radius: 50%; /* Makes it circular */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000; /* Ensure it’s above other elements */
+}
+
+/* Chatbot Hover Effect */
+.chatbot-container:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* Chatbot Icon */
+.chatbot-icon img {
+    width: 100%; /* Fill the entire circular container */
+    height: 100%; /* Ensure no empty space */
+    border-radius: 50%; /* Keep it circular */
+    object-fit: cover; /* Make sure the image scales proportionally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+/* Chatbot Icon Hover Effect */
+.chatbot-container:hover .chatbot-icon img {
+    transform: scale(1.1); /* Zoom in on hover */
+}
+
+/* Chatbot Text */
+.chatbot-icon p {
+    position: absolute;
+    bottom: -30px; /* Positioned below the icon */
+    font-size: 12px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    background: #03093a; /* White background for better visibility */
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    opacity: 0; /* Hidden by default */
+    transform: translateY(10px); /* Start slightly below */
+    transition: all 0.3s ease;
+    pointer-events: none; /* Prevent interaction */
+}
+
+/* Show Text on Hover */
+.chatbot-container:hover .chatbot-icon p {
+    opacity: 1; /* Show text */
+    transform: translateY(0); /* Move into view */
+}
+
+/* Chatbot Arrow */
+.chatbot-arrow {
+    position: absolute;
+    top: -20px; /* Positioned above the chatbot */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #1e3da3; /* Match the container's gradient color */
+    animation: bounce 1.5s infinite; /* Add a bouncing animation */
+    z-index: 1000;
+    display: block; /* Always visible */
+}
+
+/* Bouncing Animation for the Arrow */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-8px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chatbot-container {
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .chatbot-icon p {
+        font-size: 10px;
+    }
+
+    .chatbot-arrow {
+        top: -15px; /* Adjust arrow for smaller size */
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid #1e3da3;
+    }
 }

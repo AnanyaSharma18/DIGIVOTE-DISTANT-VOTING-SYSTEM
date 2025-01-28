@@ -58,8 +58,46 @@ function populateTable() {
   // After the table is populated, assign event listeners to each vote button using getElementById
   for (let i = 0; i < partyData.length; i++) {
     const voteButton = document.getElementById(`voteButton${i}`);
-    voteButton.addEventListener("click", () => castVote(partyData[i].name, partyData[i].candidate));
+    voteButton.addEventListener("click", () => showConfirmation(partyData[i].name, partyData[i].candidate));
   }
+}
+
+// Function to show the custom confirmation message box
+function showConfirmation(partyName, candidateName) {
+  const modal = document.getElementById("confirmationModal");
+  const confirmationMessage = document.getElementById("confirmationMessage");
+  const confirmVoteButton = document.getElementById("confirmVoteButton");
+  const cancelVoteButton = document.getElementById("cancelVoteButton");
+
+  // Set the confirmation message
+  confirmationMessage.textContent = `Are you sure you want to vote for ${candidateName} from ${partyName}?`;
+
+  // Show the modal
+  modal.style.display = "block";
+
+  // If the user clicks "Yes", cast the vote
+  confirmVoteButton.onclick = function() {
+    castVote(partyName, candidateName);
+    modal.style.display = "none";
+  };
+
+  // If the user clicks "No", close the modal without casting the vote
+  cancelVoteButton.onclick = function() {
+    modal.style.display = "none";
+  };
+
+  // Close the modal if the user clicks the "X"
+  const closeButton = document.querySelector(".close");
+  closeButton.onclick = function() {
+    modal.style.display = "none";
+  };
+
+  // Close the modal if the user clicks outside the modal content
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
 }
 
 // Function to handle voting by redirecting to thankyou.html
