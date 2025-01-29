@@ -92,24 +92,16 @@
         </div>
     </section>
     
-    
+ <!-- Section for the Key Statistics -->
+ <section id="voting-data-section">
+    <h2>Key Statistics</h2>
+    <p>Graphical representation of various components statistics into the Platform..</p>
+    <div id="chart-container">
+        <canvas id="votingChart"></canvas>
+    </div>
+</section>
 
-    <!-- Statistics Section -->
-    <section class="statistics">
-        <h2>Key Statistics</h2>
-        <div class="stat">
-            <h3>150M+</h3>
-            <p>Registered Voters</p>
-        </div>
-        <div class="stat">
-            <h3>200+</h3>
-            <p>Election Cycles Managed</p>
-        </div>
-        <div class="stat">
-            <h3>99.99%</h3>
-            <p>System Uptime</p>
-        </div>
-    </section>
+
 
     <!-- News Section -->
     <section class="news">
@@ -234,8 +226,7 @@
         </div>
     </footer>
 
-</body>
-</html>
+
 
 
 
@@ -247,49 +238,11 @@
         <p>hey,I am DigiVote</p>
     </div>
 </div>
-
-
-<!-- JavaScript -->
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function changeSlide(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let slides = document.querySelectorAll(".slide");
-            let dots = document.querySelectorAll(".dot");
-
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-
-            slides.forEach(slide => slide.style.display = "none");
-            dots.forEach(dot => dot.className = dot.className.replace(" active", ""));
-
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-
-        setInterval(() => changeSlide(1), 5000); // Automatic slideshow
-
-        //navigation
-     function toggleMenu() {
-    const navbar = document.querySelector(".navbar");
-    const menu = document.querySelector(".navbar-menu");
-    menu.classList.toggle("mobile");
-    navbar.classList.toggle("open");
-}
-function openChatbot() {
-    alert("Launching DigiVote Chatbot!"); // Replace this with chatbot integration.
-}
-
-
-    </script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="home.js"></script>
 </body>
 </html>
+
+
+
+
