@@ -1,6 +1,4 @@
 # DIGIVOTE: Distant Voting System
-## Presentation
-DIGIVOTE CODE FOR BHARAT PRESENTATION: [DIGIVOTE](https://docs.google.com/presentation/d/1cyenv4dRNIVgSslrXwle1Db7Pv6WGuqs/edit?usp=sharing&ouid=108752335974022103687&rtpof=true&sd=true)
 ## Video
 1. DIGIVOTE FRONTEND RUNTHROUGH: [DIGIVOTE Video RunThrough](https://drive.google.com/file/d/1b1N9GEeXpI5PnBAd_C8N1jBEGBccPHoj/view?usp=sharing)
 2. DIGIVOTE USER INTERFACE WORKING:[Voter Video RunThrough](https://drive.google.com/file/d/1GLJ1FErBvV4lhnB0KMsnYiVMRgCj9bJM/view?usp=drive_link)
