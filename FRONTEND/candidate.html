@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Candidates</title>
+    <link rel="stylesheet" href="candidate.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <h1>Candidate Management</h1>
+            <nav>
+                <ul>
+                    
+                    <li><a href="#logout" id="logout-btn">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="section">
+            <h2>Manage Candidates</h2>
+            <div class="candidate-actions">
+                <button id="add-candidate-btn">Add Candidate</button>
+            </div>
+
+            <table class="candidate-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Party</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="candidate-list">
+                    <!-- Candidates will be displayed here -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Election Management System. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Modal for Adding Candidate -->
+    <div id="add-candidate-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h3>Add New Candidate</h3>
+            <form id="candidate-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required><br><br>
+                <label for="party">Party:</label>
+                <input type="text" id="party" required><br><br>
+                <button type="submit">Add Candidate</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="candidate.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+/* Resetting margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f4f7f6, #e0f7fa);
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Header and Navigation Bar */
+header {
+    width: 100%;
+    background-color: #004d99;
+    padding: 15px 0;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navbar h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4d4d;
+}
+
+/* Main container */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 80px; /* To avoid header overlap */
+    padding: 20px;
+}
+
+/* Section Styling */
+.section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Election Info Card */
+.info-card {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.info-card p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.info-card:hover {
+    background-color: #e3f2fd;
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    background-color: #004d99;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Logout Button Styling */
+#logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+#logout-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .navbar h1 {
+        font-size: 2rem;
+    }
+
+    .nav ul li {
+        margin-right: 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .info-card p {
+        font-size: 1rem;
+    }
+
+    #logout-btn {
+        padding: 12px 25px;
+    }
+}
