@@ -75,4 +75,14 @@ body {
     padding: 10px 0;
     font-size: 14px;
   }
+#errorMessage {
+    display: none;
+    color: red;
+    margin-top: 10px;
+  }
+  #timer {
+    font-size: 14px;
+    color: gray;
+    margin-top: 5px;
+  }
   
