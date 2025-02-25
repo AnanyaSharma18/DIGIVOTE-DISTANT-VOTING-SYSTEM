@@ -53,11 +53,11 @@
             padding: 10px 20px;
             border-radius: 10px;
             display: inline-block;
-            margin-bottom: 20px; /* Adds space between EPIC number and the button */
+            margin-bottom: 20px;
         }
 
-        .exit-btn {
-            display: block; /* Ensures the button takes a new line */
+        .btn {
+            display: block;
             padding: 10px 25px;
             font-size: 16px;
             font-weight: bold;
@@ -68,11 +68,11 @@
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             transition: background-color 0.3s ease;
-            margin-top: 20px; /* Adds space between the EPIC number and the Exit button */
-            width: 100%; /* Makes the button stretch across the container */
+            margin-top: 10px;
+            width: 100%;
         }
 
-        .exit-btn:hover {
+        .btn:hover {
             background-color: #6e8efb;
         }
 
@@ -86,15 +86,6 @@
                 transform: translateY(0);
             }
         }
-
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
     </style>
 </head>
 <body>
@@ -102,19 +93,41 @@
         <h1>Congratulations!</h1>
         <p>You have successfully completed the verification process!</p>
         <p>We are thrilled to provide you with your unique EPIC Number:</p>
-        <div class="epic-number">____________</div>
-        <!-- Exit Button on the next line -->
-        <button class="exit-btn" id="exitButton">Go to Login</button>
+        <div class="epic-number" id="epicNumber">_______</div>
+        
+        <button class="btn" id="downloadButton">Download EPIC</button>
+        <button class="btn" id="exitButton">Go to Login</button>
     </div>
 
     <script>
-        // Get the exit button by its ID
-        const exitButton = document.getElementById("exitButton");
+        async function fetchUniqueEPIC() {
+    try {
+        const response = await fetch("http://localhost:5000/generate-epic", { method: "POST" });
+        const data = await response.json();
+        document.getElementById("epicNumber").textContent = data.epicID;
+    } catch (error) {
+        console.error("Error fetching EPIC ID:", error);
+    }
+}
 
-        // Redirect to login page when the exit button is clicked
-        exitButton.addEventListener("click", function() {
-            window.location.href = "login.html"; // Replace with the actual login page filename
-        });
+document.getElementById("exitButton").addEventListener("click", function() {
+    window.location.href = "login.html";
+});
+
+document.getElementById("downloadButton").addEventListener("click", function() {
+    const epicNumber = document.getElementById("epicNumber").textContent;
+    const blob = new Blob(["Your EPIC Number: " + epicNumber], { type: "text/plain" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "EPIC_Number.txt";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+
+// Fetch the EPIC ID when the page loads
+window.onload = fetchUniqueEPIC;
+
     </script>
 </body>
 </html>
