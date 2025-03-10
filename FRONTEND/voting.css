@@ -1,177 +1,372 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right,#f4f4f4,  #f4f4f4);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  /* Header Styling */
-  .header {
-    text-align: center;
-    background: #2c3e50;
-    padding: 1em;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Main Section Styling */
-  .main-container {
-    flex: 1;
-    padding: 2em;
-  }
-  
-  .selection-section {
-    text-align: center;
-    margin-bottom: 2em;
-  }
-  
-  .selection-section label {
-    margin-right: 0.5em;
-    font-weight: bold;
-  }
-  
-  .selection-section select {
-    margin: 0.5em;
-    padding: 0.5em;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1em;
-  }
-  
-  /* Table Styling */
-  .table-section {
-    text-align: center;
-  }
-  
-  .table-section h2 {
-    margin-bottom: 1em;
-    color: #34495e;
-  }
-  
-  table {
-    margin: 0 auto;
-    border-collapse: collapse;
-    width: 90%;
-    background: #fff;
-    color: #333;
-  }
-  
-  table th, table td {
-    padding: 1em;
-    border: 1px solid #ddd;
-    text-align: center;
-  }
-  
-  table th {
-    background: #1c5d99;
-    color: #fff;
-  }
-  
-  table img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-  /* Vote Button */
-.vote-button {
-  background: #4caf50;
-  color: white;
-  border: none;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #e3f2fd, #bbdefb);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.vote-button:hover {
-  background: #45a049;
-}
-/* Basic styling for the modal */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scrolling if needed */
-  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
-}
-
-/* Modal content (the container) */
-.modal-content {
-  background-color: #254171;
-  margin: 15% auto; /* Centered on the screen */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Adjust width as needed */
-  max-width: 400px;
-  border-radius: 8px;
-}
-
-/* Close button (×) */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
+/* Header Styling */
+.header {
+  text-align: center;
+  background: linear-gradient(135deg, #172f5b, #23447e);
+  color: #fff;
+  padding: 1.1em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-size: 1.5em;
   font-weight: bold;
-  cursor: pointer;
+  letter-spacing: 1px;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Styling the message text inside the modal */
-#confirmationMessage {
-  font-size: 18px;
-  margin-bottom: 20px;
+/* Main Section Styling */
+.main-container {
+  flex: 1;
+  padding: 2em;
   text-align: center;
 }
 
-/* Styling for the confirmation and cancellation buttons */
+/* Selection Section */
+.selection-section {
+  margin-bottom: 2em;
+}
+
+.selection-section label {
+  margin-right: 0.5em;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #1e3c72;
+}
+
+.selection-section select {
+  margin: 0.5em;
+  padding: 0.6em;
+  border-radius: 8px;
+  border: 2px solid #1e3c72;
+  font-size: 1em;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.selection-section select:hover {
+  background: #e3f2fd;
+}
+
+/* Table Styling */
+.table-section h2 {
+  margin-bottom: 0.8em;
+  color: #1e3c72;
+  font-size: 1.9em;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 90%;
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+table th, table td {
+  padding: 1em;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 1em;
+}
+
+table th {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  font-weight: bold;
+}
+
+table img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+table img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Vote Button */
+.vote-button {
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.vote-button:hover {
+  background: linear-gradient(135deg, #45a049, #2e7d32);
+  transform: scale(1.05);
+}
+
+/* 🌟 Sleek Floating Glassmorphic Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  max-width: 380px;  /* Smaller width */
+  background: rgba(40, 54, 85, 0.92); /* Deep blue glass effect */
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+  animation: floatingEffect 1.8s infinite ease-in-out alternate;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* 🌟 Floating Animation */
+@keyframes floatingEffect {
+  from {
+    transform: translate(-50%, -52%);
+  }
+  to {
+    transform: translate(-50%, -48%);
+  }
+}
+
+/* 🌟 Smooth Zoom-in Effect */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* 🌟 Close Button - Soft Pulse Effect */
+.close {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.close:hover {
+  color: #ff3b3b;
+  transform: scale(1.2);
+  animation: pulseEffect 0.7s infinite alternate;
+}
+
+/* 🌟 Pulse Animation */
+@keyframes pulseEffect {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* 🌟 Confirmation Message */
+#confirmationMessage {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* 🌟 Buttons - Elegant & Minimal */
 button {
-  padding: 10px 20px;
-  margin: 10px;
+  padding: 12px 28px;
+  margin: 8px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 10px;
   border: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
 }
 
+/* 🌟 Confirm Button - Soft Glow */
 #confirmVoteButton {
-  background-color: #4CAF50; /* Green for confirmation */
+  background: linear-gradient(135deg, #27ae60, #145a32);
   color: white;
+  box-shadow: 0 0 10px rgba(39, 174, 96, 0.5);
 }
 
+/* 🌟 Cancel Button - Soft Glow */
 #cancelVoteButton {
-  background-color: #f44336; /* Red for cancellation */
+  background: linear-gradient(135deg, #e74c3c, #922b21);
   color: white;
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
 }
 
-/* Change button color on hover */
+/* 🌟 Hover Effects */
 button:hover {
-  opacity: 0.8;
+  opacity: 0.9;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Button focus style */
-button:focus {
-  outline: none;
+
+/* Footer Styling */
+.footer {
+  text-align: center;
+  padding: 1em;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
 }
 
-  
-  /* Footer Styling */
-  .footer {
-    text-align: center;
-    padding: 1em;
-    background: #2c3e50;
+
+/* Tooltip Styling (Smaller & More Compact) */
+#tooltip {
+  position: absolute;
+  width: 300px; /* Reduced width */
+  max-width: 90%;
+  background: linear-gradient(135deg, rgba(37, 35, 67, 0.95), rgba(51, 53, 71, 0.95));
+  color: #ffffff;
+  text-align: left;
+  padding: 12px; /* Less padding */
+  border-radius: 10px; /* Smaller border radius */
+  box-shadow: 0px 6px 20px rgba(0, 255, 255, 0.5);
+  font-size: 14px; /* Reduced font size */
+  line-height: 1.5;
+  backdrop-filter: blur(12px);
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 1000;
+  transform: scale(0.85);
+  animation: glowBorder 2.5s infinite alternate;
+}
+
+/* Animated Border Glow */
+@keyframes glowBorder {
+  from {
+    box-shadow: 0px 6px 20px rgba(0, 255, 255, 0.5);
   }
-  
+  to {
+    box-shadow: 0px 6px 25px rgba(255, 0, 255, 0.6);
+  }
+}
+
+/* Tooltip Arrow */
+#tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px; /* Smaller arrow */
+  border-style: solid;
+  border-color: rgba(23, 48, 69, 0.95) transparent transparent transparent;
+  filter: drop-shadow(0px 3px 6px rgba(0, 255, 255, 0.4));
+}
+
+/* Bullet Points Styling */
+#tooltip ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#tooltip li {
+  margin-bottom: 5px; /* Less spacing */
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+  font-size: 13px; /* Reduced text size */
+}
+
+/* Animated Bullet Points */
+#tooltip li::before {
+  content: "◆";
+  font-size: 14px; /* Smaller bullet */
+  margin-right: 8px; /* Less space */
+  animation: colorChange 2s infinite alternate;
+}
+
+/* Bullet Point Color Change Animation */
+@keyframes colorChange {
+  0% {
+    color: #00eaff;
+    text-shadow: 0px 0px 6px rgba(0, 234, 255, 0.7);
+  }
+  50% {
+    color: #ff00ff;
+    text-shadow: 0px 0px 8px rgba(255, 0, 255, 0.8);
+  }
+  100% {
+    color: #ffcc00;
+    text-shadow: 0px 0px 10px rgba(255, 204, 0, 1);
+  }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animated Background Effect */
+@keyframes backgroundPulse {
+  0% {
+    background: linear-gradient(135deg, rgba(15, 37, 66, 0.95), rgba(60, 60, 60, 0.95));
+  }
+  50% {
+    background: linear-gradient(135deg, rgba(40, 51, 78, 0.95), rgba(80, 80, 80, 0.95));
+  }
+  100% {
+    background: linear-gradient(135deg, rgba(60, 60, 91, 0.95), rgba(60, 60, 60, 0.95));
+  }
+}
+
+#tooltip {
+  animation: backgroundPulse 3s infinite alternate;
+}
+
+/* Show Tooltip */
+#tooltip.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+
