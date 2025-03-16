@@ -4,16 +4,17 @@ on: [push, pull_request]
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-22.04  # Force using Ubuntu 22.04 (compatible with Fabric)
+    runs-on: ubuntu-22.04  # Force using Ubuntu 22.04 for compatibility
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Install Dependencies
+      - name: Install Required Packages (Without Conflict)
         run: |
           sudo apt update
-          sudo apt install -y curl docker.io docker-compose golang-go
+          sudo apt install -y curl golang-go
+          sudo apt install -y --no-install-recommends docker.io docker-compose
 
       - name: Start Docker Service
         run: |
