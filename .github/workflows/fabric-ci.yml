@@ -1,0 +1,40 @@
+name: Hyperledger Fabric CI
+
+on: [push, pull_request]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y curl docker.io docker-compose golang-go
+
+      - name: Set Up Docker
+        run: |
+          sudo usermod -aG docker $USER
+          newgrp docker
+
+      - name: Download Hyperledger Fabric
+        run: |
+          curl -sSL https://bit.ly/2ysbOFE | bash -s
+
+      - name: Start Fabric Network
+        run: |
+          cd $HOME/fabric-samples/test-network
+          ./network.sh up createChannel -ca
+
+      - name: Deploy DigiVote Smart Contract
+        run: |
+          cd $HOME/fabric-samples/test-network
+          ./network.sh deployCC -ccn digivote -ccp ../chaincode/digivote -ccl go
+
+      - name: Test DigiVote Smart Contract
+        run: |
+          peer chaincode invoke -C mychannel -n digivote -c '{"Args":["AddVoter", "VOTER_1", "John Doe", "john@example.com"]}'
+          peer chaincode query -C mychannel -n digivote -c '{"Args":["GetVoterStatus", "VOTER_1"]}'
