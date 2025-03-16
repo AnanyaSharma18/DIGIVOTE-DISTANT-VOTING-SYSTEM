@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04  # Force using Ubuntu 22.04 (compatible with Fabric)
 
     steps:
       - name: Checkout Code
@@ -15,10 +15,10 @@ jobs:
           sudo apt update
           sudo apt install -y curl docker.io docker-compose golang-go
 
-      - name: Set Up Docker
+      - name: Start Docker Service
         run: |
-          sudo usermod -aG docker $USER
-          newgrp docker
+          sudo systemctl start docker
+          sudo chmod 666 /var/run/docker.sock
 
       - name: Download Hyperledger Fabric
         run: |
