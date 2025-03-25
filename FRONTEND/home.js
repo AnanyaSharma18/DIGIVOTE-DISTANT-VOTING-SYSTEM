@@ -34,7 +34,7 @@
     navbar.classList.toggle("open");
 }
 function openChatbot() {
-    alert("Launching DigiVote Chatbot!"); // Replace this with chatbot integration.
+    alert("http://127.0.0.1:5000/", "_blank"); // Replace this with chatbot integration.
 }
 //piechart
 const ctx = document.getElementById('votingChart').getContext('2d');
@@ -126,6 +126,44 @@ const config = {
 };
 
 const votingChart = new Chart(ctx, config);
+//voting status
+document.addEventListener("DOMContentLoaded", function () {
+    // Election Data (Example)
+    const voterInfoData = [
+        { name: "Presidential Election", date: "2024-11-08", status: "Upcoming", location: "Nationwide", id: "Yes", method: "Online" },
+        { name: "State Elections", date: "2023-10-12", status: "Completed", location: "California", id: "Yes", method: "Online" },
+        { name: "Local Council Election", date: "2023-05-04", status: "Completed", location: "Los Angeles", id: "Yes", method: "Online" }
+    ];
 
+    const voterTableBody = document.getElementById("voterInfoTable");
 
-   
+    // Function to Populate Table
+    function populateTable(data) {
+        voterTableBody.innerHTML = ""; // Clear table
+        data.forEach(vote => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${vote.name}</td>
+                <td>${vote.date}</td>
+                <td>${vote.status}</td>
+                <td>${vote.location}</td>
+                <td>${vote.id}</td>
+                <td>${vote.method}</td>
+            `;
+            voterTableBody.appendChild(row);
+        });
+    }
+
+    // Initial Load with All Data
+    populateTable(voterInfoData);
+
+    // Function to Filter Elections
+    window.filterElections = function (status) {
+        if (status === "all") {
+            populateTable(voterInfoData);
+        } else {
+            const filteredData = voterInfoData.filter(vote => vote.status === status);
+            populateTable(filteredData);
+        }
+    };
+});
