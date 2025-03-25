@@ -17,6 +17,19 @@ function navigate(section) {
       buttonId: buttonId, // Unique button ID
       url: url, // URL being navigated to
     };
+      // Simulating data loading
+    setTimeout(() => {
+      document.getElementById("voter-count").textContent = "1,245";
+      document.getElementById("election-count").textContent = "8";
+      document.getElementById("candidate-count").textContent = "32";
+
+      // Remove skeleton effect
+      document.querySelectorAll('.skeleton').forEach(el => el.classList.remove('skeleton'));
+    }, 2000);
+
+    function navigateTo(page) {
+      window.location.href = page;
+    }
   
     // Uncomment the below block to send the data to your backend API
     // fetch('/api/log-action', {
