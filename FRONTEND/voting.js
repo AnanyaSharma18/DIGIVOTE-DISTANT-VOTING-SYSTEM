@@ -2,10 +2,10 @@
 const partyData = [
   { 
     name: "Party A", 
-    logo: "dummy pic/logo2.png", 
+    logo: "logo2.png", 
     candidate: "Candidate A", 
     description: [
-      "<img src='dummy pic/candidate1.jpg' alt='Candidate A' style='border-radius: 50%; width: 80px; height: 80px;'>",
+      "<img src='candidate1.jpg' alt='Candidate A' style='border-radius: 50%; width: 80px; height: 80px;'>",
       "<br> Age: 52<br> Education: PhD in Economics",
       "Previous Position: Senator (10 years)",
       "Key Strength: Economic Reforms & Job Creation",
@@ -14,10 +14,10 @@ const partyData = [
   },
   { 
     name: "Party B", 
-    logo: "dummy pic/logo2.png", 
+    logo: "logo2.png", 
     candidate: "Candidate B", 
     description: [
-      "<img src='dummy pic/candidate1.jpg' alt='Candidate B' style='border-radius: 50%; width: 80px; height: 80px;'>",
+      "<img src='candidate1.jpg' alt='Candidate B' style='border-radius: 50%; width: 80px; height: 80px;'>",
       "<br> Age: 48<br> Education: Master's in Public Administration",
       "Previous Position: Governor",
       "Key Strength: Education & Healthcare Policies",
@@ -26,10 +26,10 @@ const partyData = [
   },
   { 
     name: "Party C", 
-    logo: "dummy pic/logo2.png", 
+    logo: "logo2.png", 
     candidate: "Candidate C", 
     description: [
-      "<img src='dummy pic/candidate1.jpg' alt='Candidate C' style='border-radius: 50%; width: 80px; height: 80px;'>",
+      "<img src='candidate1.jpg' alt='Candidate C' style='border-radius: 50%; width: 80px; height: 80px;'>",
       "<br> Age: 60<br> Education: Military Academy Graduate",
       "Previous Position: National Security Advisor",
       "Key Strength: Defense & Cybersecurity",
@@ -38,10 +38,10 @@ const partyData = [
   },
   { 
     name: "Party D", 
-    logo: "dummy pic/logo2.png", 
+    logo: "logo2.png", 
     candidate: "Candidate D", 
     description: [
-      "<img src='dummy pic/candidate1.jpg' alt='Candidate D' style='border-radius: 50%; width: 80px; height: 80px;'>",
+      "<img src='candidate1.jpg' alt='Candidate D' style='border-radius: 50%; width: 80px; height: 80px;'>",
       "<br> Age: 45<br> Education: PhD in Environmental Science",
       "Previous Position: Environmental Minister",
       "Key Strength: Climate Policies & Renewable Energy",
@@ -50,10 +50,10 @@ const partyData = [
   },
   { 
     name: "Party E", 
-    logo: "dummy pic/logo2.png", 
+    logo: "logo2.png", 
     candidate: "Candidate E", 
     description: [
-      "<img src='dummy pic/candidate1.jpg' alt='Candidate E' style='border-radius: 50%; width: 80px; height: 80px;'>",
+      "<img src='candidate1.jpg' alt='Candidate E' style='border-radius: 50%; width: 80px; height: 80px;'>",
       "<br>Age: 50<br>Education: Law Degree",
       "Previous Position: Social Rights Activist",
       "Key Strength: Labor Rights & Equal Opportunities",
@@ -62,10 +62,10 @@ const partyData = [
   },
   { 
     name: "Party F", 
-    logo: "dummy pic/logo2.png", 
+    logo: "logo2.png", 
     candidate: "Candidate F", 
     description: [
-      "<img src='dummy pic/candidate1.jpg' alt='Candidate F' style='border-radius: 50%; width: 80px; height: 80px;'>",
+      "<img src='candidate1.jpg' alt='Candidate F' style='border-radius: 50%; width: 80px; height: 80px;'>",
       "<br>Age: 55<br>Education: Master's in International Relations",
       "Previous Position: Minister of Foreign Affairs",
       "Key Strength: Trade & Global Partnerships",
@@ -74,10 +74,10 @@ const partyData = [
   },
   { 
     name: "Party G", 
-    logo: "dummy pic/logo2.png", 
+    logo: "logo2.png", 
     candidate: "Candidate G", 
     description: [
-      "<img src='dummy pic/candidate1.jpg' alt='Candidate G' style='border-radius: 50%; width: 80px; height: 80px;'>",
+      "<img src='candidate1.jpg' alt='Candidate G' style='border-radius: 50%; width: 80px; height: 80px;'>",
       "<br>Age: 47<br>Education: Urban Development Specialist",
       "Previous Position: Mayor",
       "Key Strength: Crime Prevention & Housing Policies",
@@ -86,10 +86,10 @@ const partyData = [
   },
   { 
     name: "Party H", 
-    logo: "dummy pic/logo2.png", 
+    logo: "logo2.png", 
     candidate: "Candidate H", 
     description: [
-      "<img src='dummy pic/candidate1.jpg' alt='Candidate H' style='border-radius: 50%; width: 80px; height: 80px;'>",
+      "<img src='candidate1.jpg' alt='Candidate H' style='border-radius: 50%; width: 80px; height: 80px;'>",
       "<br>Age: 43<br>Education: Bachelor's in Computer Science",
       "Previous Position: Tech Innovator & Policy Advisor",
       "Key Strength: Digital Economy & Cybersecurity",
@@ -98,10 +98,10 @@ const partyData = [
   },
   { 
     name: "Party I", 
-    logo: "dummy pic/logo2.png", 
+    logo: "logo2.png", 
     candidate: "Candidate I", 
     description: [
-      "<img src='dummy pic/candidate1.jpg' alt='Candidate I' style='border-radius: 50%; width: 80px; height: 80px;'>",
+      "<img src='candidate1.jpg' alt='Candidate I' style='border-radius: 50%; width: 80px; height: 80px;'>",
       "<br>Age: 58<br>Education: Juris Doctor (JD)",
       "Previous Position: Supreme Court Judge",
       "Key Strength: Legal Reforms & Judicial Efficiency",
@@ -110,10 +110,10 @@ const partyData = [
   },
   { 
     name: "Party J", 
-    logo: "dummy pic/logo2.png", 
+    logo: "logo2.png", 
     candidate: "Candidate J", 
     description: [
-      "<img src='dummy pic/candidate1.jpg' alt='Candidate J' style='border-radius: 50%; width: 80px; height: 80px;'>",
+      "<img src='candidate1.jpg' alt='Candidate J' style='border-radius: 50%; width: 80px; height: 80px;'>",
       "<br>Age: 49<br>Education: MD in Public Health",
       "Previous Position: Health Policy Expert",
       "Key Strength: Healthcare & Medical Innovations",
