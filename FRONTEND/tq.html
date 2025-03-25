@@ -8,10 +8,39 @@
   <link rel="stylesheet" href="tq.css">
 </head>
 <body>
+  <div class="navbar">
+    <div class="navbar-logo">
+        <img src="logo.png" alt="Logo" />
+      
+    <h1>Distant Voting System</h1>
+</div>
+
+<ul class="navbar-menu">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li>
+        <a href="service.html">Services</a>
+        <ul class="dropdown-menu">
+            <li><a href="#design">Design</a></li>
+            <li><a href="#development">Development</a></li>
+            <li><a href="#marketing">Marketing</a></li>
+        </ul>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+</div>
+</div>
+<div class="container-wrapper">
   <div class="thank-you-container">
     <h1>Thank You for Voting!</h1>
     <p>Your vote has been successfully submitted. We appreciate your participation.</p>
     <a href="home.html" class="back-button">Exit</a>
   </div>
+</div>
 </body>
 </html>
