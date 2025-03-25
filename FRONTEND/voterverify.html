@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Voting Verification</title>
+    <link rel="stylesheet" href="voterverify.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="logo.png" alt="Logo" />
+          
+        <h1>Distant Voting System</h1>
+    </div>
+    
+    <ul class="navbar-menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+            <a href="service.html">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="#design">Design</a></li>
+                <li><a href="#development">Development</a></li>
+                <li><a href="#marketing">Marketing</a></li>
+            </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    </div>
+    </div>
+    <header>
+        <h1>Eligibility Criteria</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Voter Verification</h2>
+            <label for="category">Select Category:</label>
+            <select id="category" onchange="handleCategoryChange()">
+                <option value="">--Select--</option>
+                <option value="student">Working Professional - Student</option>
+                <option value="job">Working Professional - Job</option>
+                <option value="disabled">Disabled</option>
+                <option value="senior">Senior Citizen</option>
+            </select>
+            
+            <div id="verification" style="display:none;">
+                <label for="voter_id">Upload Voter ID:</label>
+                <input type="file" id="voter_id"><br>
+                <label for="voter_address">Voter ID Address:</label>
+                <input type="text" id="voter_address"><br>
+                <label for="current_address">Current Address:</label>
+                <input type="text" id="current_address"><br>
+                <button onclick="validateUser()">Verify</button>
+            </div>
+            
+            <div id="disabled-verification" style="display:none;">
+                <h3>Disabled Verification</h3>
+                <label for="disability_certificate">Upload Disability Certificate:</label>
+                <input type="file" id="disability_certificate"><br>
+                <button onclick="validateDisability()">Verify</button>
+            </div>
+            
+            <div id="senior-verification" style="display:none;">
+                <h3>Senior Citizen Verification</h3>
+                <label for="birth_certificate">Upload Birth Certificate:AGE>60</label>
+                <input type="file" id="birth_certificate"><br>
+            
+                <label for="medical_certificate">Upload Medical Certificate:</label>
+                <input type="file" id="medical_certificate"><br>
+            
+                <button onclick="validateSeniorCitizen()">Verify</button>
+            </div>
+            
+            <p id="message" class="error-message"></p>
+            <button id="proceed" disabled>Proceed to Next Step</button>
+        </div>
+    </main>
+    <script src="voterverify.js"></script>
+</body>
+</html>
