@@ -7,16 +7,81 @@
   <link rel="stylesheet" href="admin-dashboard.css">
 </head>
 <body>
-  <div class="container">
-    <h1 class="animated-header">ADMIN DASHBOARD</h1>
-    <div class="button-container">
-      <button class="dashboard-btn" id="btn-manage-voters" onclick="navigateTo('user_details.html')">View Voters</button>
-      <button class="dashboard-btn" id="btn-manage-elections" onclick="navigateTo('viewelection.html')">View Elections</button>
-      <button class="dashboard-btn" id="btn-manage-candidates" onclick="navigateTo('candidate.html')">Manage Candidates</button>
+  <div class="navbar">
+    <div class="navbar-logo">
+        <img src="logo.png" alt="Logo" />
       
+    <h1>Distant Voting System</h1>
+</div>
+
+<ul class="navbar-menu">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li>
+        <a href="service.html">Services</a>
+        <ul class="dropdown-menu">
+            <li><a href="#design">Design</a></li>
+            <li><a href="#development">Development</a></li>
+            <li><a href="#marketing">Marketing</a></li>
+        </ul>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+</div>
+</div>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Admin Panel</h2>
+    <ul>
+      <li><a href="#" onclick="navigateTo('user_details.html')">View Voters</a></li>
+      <li><a href="#" onclick="navigateTo('viewelection.html')">View Elections</a></li>
+      <li><a href="#" onclick="navigateTo('candidate.html')">Manage Candidates</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1 class="animated-header">Admin Dashboard</h1>
+
+    <!-- Dashboard Overview -->
+    <div class="dashboard-overview">
+      <div class="card">
+        <h3>Total Voters</h3>
+        <p id="voter-count" class="skeleton"></p>
+      </div>
+      <div class="card">
+        <h3>Total Elections</h3>
+        <p id="election-count" class="skeleton"></p>
+      </div>
+      <div class="card">
+        <h3>Total Candidates</h3>
+        <p id="candidate-count" class="skeleton"></p>
+      </div>
+    </div>
+
+    <!-- Recent Activities -->
+    <div class="recent-activities">
+      <h2>Recent Activities</h2>
+      <ul id="activity-log">
+        <li>✅ Admin logged in</li>
+        <li>🗳️ New voter registered</li>
+        <li>📊 Election results updated</li>
+      </ul>
     </div>
   </div>
 
-  <script src="admin-dashboard.js"></script>
+  
+ 
+<script src="admin-dashboard.js"></script>
+
 </body>
 </html>
+
+
+  
+
