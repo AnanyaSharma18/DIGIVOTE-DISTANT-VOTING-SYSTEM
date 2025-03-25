@@ -5,90 +5,289 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting ID</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-        }
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
-            overflow: hidden;
-        }
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+    padding-top: 0px; /* Space for fixed navbar */
+}
 
-        .container {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            width: 80%;
-            max-width: 700px;
-            animation: fadeIn 1.5s ease;
-        }
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b2c48; /* Primary Blue Color */
+    padding: 15px 20px;
+    color: white;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the logo and heading */
+  }
+  
+ 
+  .navbar-logo img {
+    height: 100px; /* Adjust size as needed */
+    width: 100px; /* Make width equal to height for a perfect circle */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fills the circular area */
+  }
+  
+  
+  .navbar-logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    margin: 0;
+}
 
-        .container h1 {
-            font-size: 2.5rem;
-            color: #4c3c90;
-            margin-bottom: 20px;
-            line-height: 1.4;
-        }
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
 
-        .container p {
-            font-size: 1.2rem;
-            color: #333;
-            margin-bottom: 30px;
-        }
+.navbar-menu li {
+    position: relative;
+}
 
-        .epic-number {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #6e8efb;
-            background-color: #e3e7fd;
-            padding: 10px 20px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
+.navbar-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
 
-        .btn {
-            display: block;
-            padding: 10px 25px;
-            font-size: 16px;
-            font-weight: bold;
-            color: #fff;
-            background-color: #4c3c90;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease;
-            margin-top: 10px;
-            width: 100%;
-        }
+.navbar-menu a:hover {
+    background-color: #0056b3; /* Darker Blue on Hover */
+    color: #f0f0f0; /* Light Text */
+}
 
-        .btn:hover {
-            background-color: #6e8efb;
-        }
+/* Dropdown Menu Styles */
+.navbar-menu li:hover .dropdown-menu {
+    display: block;
+}
+.navbar-logo img:hover {
+    transform: scale(1.1); /* Slightly enlarges the logo */
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(116, 230, 236, 0.3); /* Adds a shadow effect */
+}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f4f4f4;
+    color: #007bff;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar-menu.mobile {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #007bff;
+    padding: 20px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-menu.mobile a {
+    text-align: left;
+}
+
+.navbar.open .navbar-menu {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Main Container */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(20, 12, 67, 0.3);
+    text-align: center;
+    width: 80%;
+    max-width: 900px;
+    height: auto;
+    margin-top: 30px; /* Ensures space below navbar */
+    opacity: 0; /* Initially hidden for animation */
+    transform: translateX(100%); /* Start off-screen */
+    animation: slideIn 1.2s ease-out forwards;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+/* Heading */
+.container h1 {
+    font-size: 2.5rem;
+    color: #4c3c90;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Paragraph */
+.container p {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* EPIC Number Box */
+.epic-number {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #6e8efb;
+    background: linear-gradient(135deg, #e3e7fd, #c2d3ff);
+    padding: 12px 25px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.btn {
+    display: block;
+    padding: 12px 30px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #4c3c90, #6e8efb);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #6e8efb, #4c3c90);
+    transform: translateY(-2px);
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+</style>
 </head>
 <body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="logo.png" alt="Logo" />
+          
+        <h1>Distant Voting System</h1>
+    </div>
+
+    <ul class="navbar-menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+            <a href="service.html">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="#design">Design</a></li>
+                <li><a href="#development">Development</a></li>
+                <li><a href="#marketing">Marketing</a></li>
+            </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+</div>
     <div class="container">
         <h1>Congratulations!</h1>
         <p>You have successfully completed the verification process!</p>
