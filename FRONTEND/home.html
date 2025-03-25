@@ -15,7 +15,7 @@
         </div>
     
         <ul class="navbar-menu">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li>
                 <a href="service.html">Services</a>
@@ -91,6 +91,51 @@
             </div>
         </div>
     </section>
+    <section class="stats-container">
+        <div class="stat-box blue">
+            <h3>Total Voters</h3>
+            <p>1,234,567</p>
+        </div>
+        <div class="stat-box red">
+            <h3>Votes Cast</h3>
+            <p>987,654</p>
+        </div>
+        <div class="stat-box green">
+            <h3>Ongoing Elections</h3>
+            <p>5</p>
+        </div>
+        <div class="stat-box orange">
+            <h3>Completed Elections</h3>
+            <p>20</p>
+        </div>
+    </section>
+    <section class="voter-info">
+        <h2>Your Voting Information</h2>
+    
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button onclick="filterElections('all')">All</button>
+            <button onclick="filterElections('Upcoming')">Upcoming</button>
+            <button onclick="filterElections('Completed')">Completed</button>
+        </div>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>Election Name</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Location</th>
+                    <th>ID Required</th>
+                    <th>Voting Method</th>
+                </tr>
+            </thead>
+            <tbody id="voterInfoTable">
+                <!-- Data will be inserted dynamically -->
+            </tbody>
+        </table>
+    </section>
+    
     
  <!-- Section for the Key Statistics -->
  <section id="voting-data-section">
