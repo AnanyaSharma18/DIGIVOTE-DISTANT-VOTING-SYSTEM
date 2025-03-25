@@ -7,6 +7,33 @@
   <link rel="stylesheet" href="tab1.css">
 </head>
 <body>
+  <div class="navbar">
+    <div class="navbar-logo">
+        <img src="logo.png" alt="Logo" />
+      
+    <h1>Distant Voting System</h1>
+</div>
+
+<ul class="navbar-menu">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li>
+        <a href="service.html">Services</a>
+        <ul class="dropdown-menu">
+            <li><a href="#design">Design</a></li>
+            <li><a href="#development">Development</a></li>
+            <li><a href="#marketing">Marketing</a></li>
+        </ul>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+<div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+</div>
+</div>
   <div class="container">
     <!-- Sidebar Navigation -->
     <div class="tabs">
@@ -18,7 +45,7 @@
         <li><a href="#section5">Aadhaar Details</a></li>
         <li><a href="#section6">Gender</a></li>
         <li><a href="#section7">Permanent Address</a></li>
-        <li><a href="#section8">Present Address</a></li>
+        <li><a href="#section8">Current Address</a></li>
         <li><a href="#section9">Remote Eligibility</a></li>
         <li><a href="#section10">EPIC Number</a></li>
       </ul>
@@ -26,7 +53,7 @@
 
     <!-- Form Sections -->
     <div class="form-sections">
-      <div class="heading" style="font-size: 14px; text-decoration: underline; text-align: center;">
+      <div class="heading" style="font-size: 18px; text-decoration: none; text-align: center; font-weight: bolder; background: linear-gradient(135deg, #7f9ed7, #d1dff4); border-radius: 5px; color: rgb(14, 17, 41);">
         <h1>Application form For new Voters</h1></div>
         <section id="section1">
           <h2>Select State, District</h2>
