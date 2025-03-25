@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: linear-gradient(to right, #dae1eb, #97daeb);;
 }
 
 h1, h2, h3 {
@@ -16,7 +16,7 @@ h1, h2, h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #133b5c; /* Primary Blue Color */
+    background-color: #0b2c48; /* Primary Blue Color */
     padding: 15px 20px;
     color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
@@ -79,6 +79,11 @@ h1, h2, h3 {
 /* Dropdown Menu Styles */
 .navbar-menu li:hover .dropdown-menu {
     display: block;
+}
+.navbar-logo img:hover {
+    transform: scale(1.1); /* Slightly enlarges the logo */
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(116, 230, 236, 0.3);/* Adds a shadow effect */
 }
 
 .dropdown-menu {
@@ -314,19 +319,187 @@ h1, h2, h3 {
         margin: 20px 0;
     }
 }
+/* Stats Container */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    gap: 20px;
+}
+
+/* Stat Box Styling */
+.stat-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 23%;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Hover Effects */
+.stat-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Color Variations for Each Stat Box */
+.stat-box.blue {
+    border-left: 5px solid #007bff;
+}
+
+.stat-box.red {
+    border-left: 5px solid #dc3545;
+}
+
+.stat-box.green {
+    border-left: 5px solid #28a745;
+}
+
+.stat-box.orange {
+    border-left: 5px solid #fd7e14;
+}
 
 
+/* Animation for Fade-in Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-box {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+}
+.voter-info {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.voter-info h2 {
+    color: #2b69ab;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.filter-buttons {
+    margin-bottom: 15px;
+}
+
+.filter-buttons button {
+    background-color: #3e6691;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.filter-buttons button:hover {
+    background-color: #2763a4;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 86, 179, 0.4);
+}
+
+.voter-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.voter-info th, .voter-info td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.voter-info th {
+    background: #325e8e;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.voter-info tr {
+    transition: background-color 0.3s;
+}
+
+.voter-info tr:hover {
+    background-color: #dbeafe;
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+
+.voter-info tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 /* News Section */
 .news {
     background: #f9f9f9;
-    padding: 50px 20px;
+    padding: 50px 40px;
     text-align: center;
 }
 
 .news h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    color: #333;
+    color: #272058;
 }
 
 .news-item {
@@ -532,6 +705,8 @@ h1, h2, h3 {
         padding: 18px 35px;
     }
 }
+
+
 /* Voting Section Container */
 #voting-data-section {
     background: rgba(22, 56, 108, 0.201);  /* Light Transparent Background */
