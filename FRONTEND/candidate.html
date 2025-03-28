@@ -7,19 +7,39 @@
     <link rel="stylesheet" href="candidate.css">
 </head>
 <body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="logo.png" alt="Logo" />
+          
+        <h1>Distant Voting System</h1>
+    </div>
+    
+    <ul class="navbar-menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+            <a href="service.html">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="#design">Design</a></li>
+                <li><a href="#development">Development</a></li>
+                <li><a href="#marketing">Marketing</a></li>
+            </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    </div>
+    </div>
+    
+      <header class="header">
+        <h1>Manage Candidate</h1>
+        <p>Managing all the participating Candidates.</p>
+      </header> 
 
-    <!-- Navigation Bar -->
-    <header>
-        <div class="navbar">
-            <h1>Candidate Management</h1>
-            <nav>
-                <ul>
-                    
-                    <li><a href="#logout" id="logout-btn">Logout</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
     <!-- Main Content -->
     <div class="container">
