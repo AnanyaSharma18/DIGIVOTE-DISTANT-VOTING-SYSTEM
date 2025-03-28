@@ -7,39 +7,66 @@
     <link rel="stylesheet" href="viewelection.css">
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <header>
-        <div class="navbar">
-            <h1>Election Management</h1>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="logo.png" alt="Logo" />
           
-            <nav>
-                <ul>
-                    <li><a href="#election-info">Election Info</a></li>
-                    <li><a href="#logout" id="logout-btn">Logout</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        <h1>Distant Voting System</h1>
+    </div>
+    
+    <ul class="navbar-menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+            <a href="service.html">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="#design">Design</a></li>
+                <li><a href="#development">Development</a></li>
+                <li><a href="#marketing">Marketing</a></li>
+            </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    </div>
+    </div>
 
-    <!-- Main Content -->
+    
+  <header class="header">
+    <h1>Election Management</h1>
+  </header>
+
     <div class="container">
-        <section id="election-info" class="section">
-            <h2>Election Information</h2>
-            <div class="info-card">
-                <p><strong>Election Date:</strong> March 15, 2025</p>
-                <p><strong>Status:</strong> Ongoing</p>
-                <p><strong>Location:</strong> National Convention Center</p>
-                <p><strong>Election Type:</strong> Presidential Election</p>
-            </div>
-        </section>
+        <h2>Election Information</h2>
+        <table>
+            <tr>
+                <th>Election Date</th>
+                <td>March 15, 2025</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>Ongoing</td>
+            </tr>
+            <tr>
+                <th>Location</th>
+                <td>National Convention Center</td>
+            </tr>
+            <tr>
+                <th>Election Type</th>
+                <td>Presidential Election</td>
+            </tr>
+        </table>
+    </div>
 
         
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Election Management System. All Rights Reserved.</p>
-    </footer>
+    <footer class="footer">
+    <p>&copy; 2025 User Details Portal Inc. | All Rights Reserved</p>
+  </footer>
 
     <script src="viewelection.js"></script>
 </body>
