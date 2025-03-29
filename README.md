@@ -73,7 +73,10 @@ To understand the context and challenges of remote voting, refer to this [YouTub
 - **Offline Voting Capability**: Develop solutions for voters with limited internet access.
 
 ---
+## Expected Timeline
+![timeline](https://github.com/user-attachments/assets/7083cc3b-ebe1-498a-8e9d-d4bfa11a89c4)
 
+---
 ## Contributing
 We welcome contributions from developers, security experts, and civic organizations. If you are interested in collaborating, please contact us or refer to our contribution guidelines.
 
