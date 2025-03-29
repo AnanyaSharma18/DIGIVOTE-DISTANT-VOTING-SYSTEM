@@ -74,7 +74,8 @@ To understand the context and challenges of remote voting, refer to this [YouTub
 
 ---
 ## Expected Timeline
-![timeline](https://github.com/user-attachments/assets/7083cc3b-ebe1-498a-8e9d-d4bfa11a89c4)
+![timeline](https://github.com/user-attachments/assets/a42a6d06-6173-4d1c-9053-d4e8dd9db016)
+
 
 ---
 ## Contributing
