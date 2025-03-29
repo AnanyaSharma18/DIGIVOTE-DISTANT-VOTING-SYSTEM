@@ -1,24 +1,71 @@
+require("dotenv").config();
 const express = require("express");
+const nodemailer = require("nodemailer");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const cors = require("cors");
+
 
 // Initialize app
 const app = express();
 const PORT = 5002;
 
 // Middleware
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
 mongoose.connect('mongodb://127.0.0.1:27017/dis_vote_db')
-.then(() => {
+  .then(() => {
     console.log('Connected to MongoDB!');
-})
-.catch((error) => {
+  })
+  .catch((error) => {
     console.error('Connection failed:', error);
+  });
+
+// ✅ Load Email Credentials
+const EMAIL_USER = process.env.EMAIL_USER;
+const EMAIL_PASS = process.env.EMAIL_PASS;
+
+// ✅ Temporary OTP storage (If needed for validation)
+const otpStore = {};
+
+
+// ✅ Send OTP via Email
+app.post("/api/send-email-otp", async (req, res) => {
+    const { email } = req.body;
+    if (!email) return res.status(400).json({ success: false, message: "Email is required." });
+
+    const otp = Math.floor(1000 + Math.random() * 9000).toString(); // Generate OTP
+
+    const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+            user: EMAIL_USER,
+            pass: EMAIL_PASS,
+        },
+    });
+
+    const mailOptions = {
+        from: EMAIL_USER,
+        to: email,
+        subject: "Your OTP Code",
+        text: `Your OTP is: ${otp}. It will expire in 5 minutes.`,
+    };
+
+    try {
+        await transporter.sendMail(mailOptions);
+        console.log(`✅ OTP Sent to ${email}: ${otp}`);
+
+      // ✅ Log message to confirm OTP generator is active
+      console.log("✅ OTP Generator is connected and working.");
+        
+        res.json({ success: true, message: `OTP sent to ${email}!` });
+    } catch (error) {
+        console.error("❌ Error sending OTP:", error);
+        res.status(500).json({ success: false, message: "Failed to send OTP." });
+    }
 });
 
 // API endpoint to handle signup data
@@ -34,8 +81,8 @@ app.post("/api/send-otp", async (req, res) => {
 
     // Insert new user into the 'users' collection
     await mongoose.connection.collection('users').insertOne({ email, phoneNumber, password });
-    await mongoose.connection.collection('user_details').insertOne({  phoneNumber });
-    await mongoose.connection.collection('user_address').insertOne({  phoneNumber });
+    await mongoose.connection.collection('user_details').insertOne({ phoneNumber });
+    await mongoose.connection.collection('user_address').insertOne({ phoneNumber });
 
     res.status(201).json({ success: true, message: "User registered successfully!" });
   } catch (error) {
@@ -151,7 +198,7 @@ app.post("/api/login", async (req, res) => {
   try {
     // Access the Admin_details collection directly
     const admin = await mongoose.connection.collection("Admin_details").findOne({
-      admin_id,
+      admin_id: Number(admin_id),
       email,
       password,
     });
@@ -166,7 +213,7 @@ app.post("/api/login", async (req, res) => {
     res.status(500).json({ success: false, message: "An error occurred. Please try again later." });
   }
 });
- 
+
 // Endpoint to fetch selected fields from all collections
 app.get("/api/users", async (req, res) => {
   try {
