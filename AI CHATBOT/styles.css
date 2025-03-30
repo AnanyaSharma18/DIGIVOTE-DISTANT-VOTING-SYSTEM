@@ -1,0 +1,159 @@
+/* ====== GENERAL STYLES ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f8ff; /* Light blue background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px; /* Prevents content from hiding under the fixed header */
+}
+
+/* ====== HEADER STYLING (Now inside the container) ====== */
+.header {
+    width: 100%;
+    background: navy;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.8em;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px 10px 0 0; /* Rounded corners only on top */
+}
+
+/* ====== MAIN CONTENT CONTAINER ====== */
+.container {
+    width: 90%;
+    max-width: 900px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 3px solid navy;
+    min-height: 400px; /* Increased height for content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ====== CATEGORY LIST IN TABULAR FORMAT ====== */
+.category-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the buttons */
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    margin: 20px auto;
+    border: 3px solid navy; /* Table-like border */
+    padding: 15px;
+    background: white;
+}
+
+/* ====== CATEGORY BUTTON STYLING ====== */
+.category-btn {
+    background: navy;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px;
+    border: 2px solid white; /* Visible borders */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    width: 100%;
+    max-width: 500px; /* Makes buttons wider like table rows */
+    display: block; 
+}
+
+.category-btn:hover {
+    background: #004080;
+    border-color: yellow; /* Highlights border on hover */
+}
+/* ====== QUESTION BUTTONS ====== */
+.question-btn {
+    background: navy;
+    color: white;
+    font-size: 1.2em;
+    padding: 12px;
+    border: 2px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 10px auto; /* Centers the buttons */
+}
+
+/* Hover Effect */
+.question-btn:hover {
+    background: #004080;
+    border-color: yellow;
+}
+
+/* Click Effect */
+.question-btn:active {
+    background: darkblue;
+}
+
+/* ====== BACK BUTTON STYLING ====== */
+.nav-button {
+    background: darkred;
+    color: white;
+    font-size: 1.1em;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 250px;
+    margin: 15px auto;
+    transition: all 0.3s ease-in-out;
+    display: block;
+}
+
+/* Back Button Hover */
+.nav-button:hover {
+    background: red;
+}
+
+
+/* ====== ANSWER BOX STYLING ====== */
+.answer-box {
+    background: #e6f7ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    width: 100%;
+    border: 2px solid navy; /* Adds border */
+}
+
+/* Answer Text */
+.answer-box p {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 768px) {
+    .category-list {
+        grid-template-columns: repeat(2, 1fr); /* 2-column layout */
+    }
+}
+
+@media (max-width: 480px) {
+    .category-list {
+        grid-template-columns: repeat(1, 1fr); /* 1-column layout */
+    }
+}

@@ -1,0 +1,425 @@
+{
+  "categories": [
+   {
+          "id": "Platform-Overview",
+          "name": "Platform Overview",
+          "emoji": "🌐"
+        },
+    {
+      "id": "voting-process",
+      "name": "Voting Process",
+      "emoji": "🗳️"
+    },
+    {
+      "id": "security-authentication",
+      "name": "Security & Authentication",
+      "emoji": "🔐"
+    },
+    {
+      "id": "eligibility-registration",
+      "name": "Eligibility & Registration",
+      "emoji": "📄✔️"
+    },
+  
+    {
+      "id": "Privacy-Data-Protection",
+      "name": "Privacy & Data Protection",
+      "emoji": "🔐⚖️"
+    },
+    {
+      "id": "Multi-Factor Authentication & Verification",
+      "name": "Multi-Factor Authentication & Verification",
+      "emoji": "🔑🛡️"
+    },
+    
+    {
+      "id": "Technical Support",
+      "name": "Technical Support",
+      "emoji": "💬🛠️"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "category_id": "Platform-Overview",
+      "text": "What is DigiVote, and how does it work?",
+      "answer": "DigiVote is a secure remote voting system that enables citizens to vote online using biometric authentication and blockchain technology."
+    },
+    
+    {
+      "id": "q2",
+      "category_id": "Platform-Overview",
+      "text": "How does DigiVote enable remote voting?",
+      "answer": "It allows registered voters to log in, verify their identity, and cast votes from any location through a secure online system."
+    },
+  
+    {
+      "id": "q3",
+      "category_id": "Platform-Overview",
+      "text": "How is DigiVote different from traditional voting?",
+      "answer": "DigiVote eliminates physical voting booths, allowing secure, location-independent, and tamper-proof elections."
+    },
+    {
+      "id": "q4",
+      "category_id": "Platform-Overview",
+      "text": "Why was DigiVote created?",
+      "answer": "To modernize elections, make voting more convenient, and prevent voter fraud using cutting-edge technology."
+    },
+    {
+      "id": "q5",
+      "category_id": "Platform-Overview",
+      "text": "What are the main features of DigiVote?",
+      "answer": "Remote voting from any device<br><br>Biometric authentication<br><br>Blockchain-based vote security<br><br>Tamper-proof audit trail<br><br>Multi-factor authentication"
+    },
+  
+    {
+      "id": "q6",
+      "category_id": "Platform-Overview",
+      "text": "What makes DigiVote a secure voting platform?",
+      "answer": "It uses multi-factor authentication, blockchain security, encryption, and biometric verification."
+    },
+    {
+      "id": "q7",
+      "category_id": "Platform-Overview",
+      "text": "How does DigiVote improve voting accessibility?",
+      "answer": "It allows aged, disabled individuals, and people in remote areas to vote without physically visiting polling booths."
+    },
+    {
+      "id": "q8",
+      "category_id": "Platform-Overview",
+      "text": "Is DigiVote legally recognized for elections?",
+      "answer": "Yes, in jurisdictions where online voting is permitted."
+    },
+  
+    {
+      "id": "q9",
+      "category_id": "Platform-Overview",
+      "text": "Has DigiVote been approved by the Election Commission?",
+      "answer": "DigiVote must be certified by national election authorities before use."
+    },
+    {
+      "id": "q10",
+      "category_id": "Platform-Overview",
+      "text": "What happens if DigiVote is banned in my country?",
+      "answer": "It cannot be used unless legal frameworks are changed."
+    },
+    {
+      "id": "q11",
+      "category_id": "voting-process",
+      "text": "How do I cast my vote using DigiVote?",
+      "answer": "Log in<br><br>Verify identity<br><br>Select candidate<br><br>Confirm and submit"
+    },
+    {
+      "id": "q12",
+      "category_id": "voting-process",
+      "text": "Can I change my vote after submitting it?",
+      "answer": "No, votes are final and cannot be altered."
+    },
+    {
+      "id": "q13",
+      "category_id": "voting-process",
+      "text": "What if I make a mistake while voting?",
+      "answer": "Check carefully before submission. Once cast, votes are locked."
+    },
+    {
+      "id": "q14",
+      "category_id": "voting-process",
+      "text": "How long does the voting process take?",
+      "answer": "Less than 5 minutes."
+    },
+    {
+      "id": "q15",
+      "category_id": "voting-process",
+      "text": "Can I vote multiple times on DigiVote?",
+      "answer": "No, each voter is limited to one vote via biometric verification."
+    },
+    {
+      "id": "q16",
+      "category_id": "voting-process",
+      "text": "Will I receive a confirmation after voting?",
+      "answer": "Yes, a receipt and digital token will be issued."
+    },
+
+    {
+      "id": "q17",
+      "category_id": "voting-process",
+      "text": "Can I see a demo of the DigiVote process before election day?",
+      "answer": "Yes, a demo video feature is available."
+    },
+    {
+      "id": "q18",
+      "category_id": "voting-process",
+      "text": "What if I move to another country after registering on DigiVote?",
+      "answer": "your registration will remain valid, but you can't able to vote you should be on the same location on the casting day of the vote."
+    },
+    {
+      "id": "q19",
+      "category_id": "security-authentication",
+      "text": "How does DigiVote prevent deepfake videos from tricking the system?",
+      "answer": "DigiVote employs liveness verification to prevent fraud."
+    },
+    {
+      "id": "q20",
+      "category_id": "security-authentication",
+      "text": "How does DigiVote ensure secure voting?",
+      "answer": "Using biometric authentication, blockchain storage, and encryption to prevent fraud."
+    },
+    {
+      "id": "q21",
+      "category_id": "security-authentication",
+      "text": "What security measures does DigiVote use?",
+      "answer": "Multi-Factor Authentication (MFA)<br><br>Biometric verification (face/fingerprint)<br><br>Blockchain immutability"
+    },
+    {
+      "id": "q22",
+      "category_id": "security-authentication",
+      "text": "How does DigiVote prevent voter fraud?",
+      "answer": "By ensuring each vote is tied to a verified user through biometric authentication."
+    },
+    {
+      "id": "q23",
+      "category_id": "security-authentication",
+      "text": "What happens if someone tries to impersonate me?",
+      "answer": "The system will detect mismatched biometrics and block the attempt."
+    },
+    {
+      "id": "q24",
+      "category_id": "security-authentication",
+      "text": "Is DigiVote safe from hacking?",
+      "answer": "Yes, all votes are recorded on a tamper-proof blockchain."
+    },
+  
+    {
+      "id": "q25",
+      "category_id": "security-authentication",
+      "text": "How does DigiVote handle biometric authentication?",
+      "answer": "Users must verify their fingerprint, facial scan, or iris scan before voting."
+    },
+    {
+      "id": "q26",
+      "category_id": "security-authentication",
+      "text": "Can DigiVote be tampered with?",
+      "answer": "No, blockchain technology prevents unauthorized changes."
+    },
+    {
+      "id": "q27",
+      "category_id": "security-authentication",
+      "text": "Can anyone see my voting history on DigiVote?",
+      "answer": "No, DigiVote ensures voter anonymity while allowing audits."
+    },
+     
+    {
+      "id": "q28",
+      "category_id": "security-authentication",
+      "text": "How does DigiVote prevent deepfake videos from tricking the system?",
+      "answer": "DigiVote employs liveness verification to prevent fraud."
+    },
+    {
+      "id": "29",
+      "category_id": "eligibility-registration",
+      "text": "Who can register for DigiVote?",
+      "answer": "Eligible citizens as per government election rules, including remote individual and disabled individuals."
+    },
+  
+    {
+      "id": "q30",
+      "category_id": "eligibility-registration",
+      "text": "Can I vote using DigiVote if I live abroad?",
+      "answer": "NO, DigiVote supports citizens for remote voting in india only."
+    },
+    {
+      "id": "q31",
+      "category_id": "eligibility-registration",
+      "text": "What are the eligibility criteria for DigiVote?",
+      "answer": "You must be:<br><br>A registered voter<br><br>Have a valid ID<br><br>Pass biometric authentication"
+    },
+    {
+      "id": "q32",
+      "category_id": "eligibility-registration",
+      "text": "How do I sign up for DigiVote?",
+      "answer": "Visit the official DigiVote portal, submit identity documents, and complete biometric verification."
+    },
+    {
+      "id": "q33",
+      "category_id": "eligibility-registration",
+      "text": "What documents do I need to register for DigiVote?",
+      "answer": "A government-issued voter ID, Aadhaar card, or passport, depending on jurisdiction."
+    },
+    {
+      "id": "q34",
+      "category_id": "eligibility-registration",
+      "text": "How can I verify my eligibility for DigiVote?",
+      "answer": "Check the official voter eligibility test on the DigiVote portal."
+    },
+    {
+      "id": "q35",
+      "category_id": "eligibility-registration",
+      "text": "What is the registration deadline for DigiVote?",
+      "answer": "It varies based on election authorities. Check the official site."
+    },
+    {
+      "id": "q36",
+      "category_id": "eligibility-registration",
+      "text": "Can I register for DigiVote after the deadline?",
+      "answer": "No, registrations close before elections to ensure security and verification."
+    },
+    {
+      "id": "q37",
+      "category_id": "security-authentication",
+      "text": "How does DigiVote ensure secure voting?",
+      "answer": "Using biometric authentication, blockchain storage, and encryption to prevent fraud."
+    },
+    {
+      "id": "q38",
+      "category_id": "Privacy-Data-Protection",
+      "text": "How does DigiVote protect voter data?",
+      "answer": "Using encryption, secure cloud storage, and multi-factor authentication."
+    },
+    {
+      "id": "q39",
+      "category_id": "Privacy-Data-Protection",
+      "text": "Is my vote anonymous on DigiVote?",
+      "answer": "Yes, votes are anonymized and recorded on blockchain."
+    },
+    {
+      "id": "q40",
+      "category_id": "Privacy-Data-Protection",
+      "text": "Can the government see how I voted?",
+      "answer": "No, DigiVote ensures complete voter anonymity."
+    },
+    {
+      "id": "q41",
+      "category_id": "Privacy-Data-Protection",
+      "text": "What happens to my biometric data after voting?",
+      "answer": "It is not stored; it is only used for real-time authentication."
+    },
+    {
+      "id": "q42",
+      "category_id": "Privacy-Data-Protection",
+      "text": "Can my data be accessed by hackers?",
+      "answer": "No, all data is end-to-end encrypted and stored securely."
+    },
+    {
+      "id": "q43",
+      "category_id": "Privacy-Data-Protection",
+      "text": "Does DigiVote share voter data with third parties?",
+      "answer": "No, DigiVote does not share user data with external agencies."
+    },
+    {
+      "id": "q44",
+      "category_id": "Privacy-Data-Protection",
+      "text": "How long does DigiVote keep my data?",
+      "answer": "Only for the legally required duration, after which it is securely deleted."
+    },
+    {
+      "id": "q45",
+      "category_id": "Multi-Factor Authentication & Verification",
+      "text": "Why does DigiVote require OTP verification?",
+      "answer": "To add an extra layer of security before login."
+    },
+    {
+      "id": "q46",
+      "category_id": "Multi-Factor Authentication & Verification",
+      "text": "What happens if I don't receive my OTP?",
+      "answer": "Try again or use email verification instead."
+    },
+    {
+      "id": "q47",
+      "category_id": "Multi-Factor Authentication & Verification",
+      "text": "Can I use email verification instead of OTP?",
+      "answer": "Yes, DigiVote supports both SMS and email authentication."
+    },
+    {
+      "id": "q48",
+      "category_id": "Multi-Factor Authentication & Verification",
+      "text": "How does DigiVote verify my identity?",
+      "answer": "Through biometric authentication, Aadhaar/Voter ID, and multi-factor security."
+    },
+    {
+      "id": "q49",
+      "category_id": "Multi-Factor Authentication & Verification",
+      "text": "Can I use face recognition instead of fingerprints?",
+      "answer": "Yes, DigiVote supports facial, fingerprint, and iris recognition you have to pass any two of them."
+    },
+    {
+      "id": "q50",
+      "category_id": "Multi-Factor Authentication & Verification",
+      "text": "Can DigiVote detect fake biometric scans?",
+      "answer": "Yes"
+    },
+    {
+      "id": "q51",
+      "category_id": "Multi-Factor Authentication & Verification",
+      "text": "What if someone else tries to use my identity?",
+      "answer": "DigiVote immediately blocks unauthorized attempts."
+    },
+    {
+      "id": "q52",
+      "category_id": "Multi-Factor Authentication & Verification",
+      "text": "Can I change my authentication method?",
+      "answer": "Yes, DigiVote allows multiple authentication options you have to verify atleast two of them."
+    },
+    {
+      "id": "q53",
+      "category_id": "Multi-Factor Authentication & Verification",
+      "text": "Can DigiVote be integrated with digital IDs?",
+      "answer": "Yes, DigiVote can be integrated with Aadhaar and Voter ID  identity systems to improve voter verification."
+    },
+
+    {
+      "id": "q54",
+      "category_id": "Multi-Factor Authentication & Verification",
+      "text": "Will DigiVote support multi-device authentication?",
+      "answer": "Yes, voters can authenticate using multiple devices such as phones, tablets, or laptops for flexibility."
+    },
+    {
+      "id": "q55",
+      "category_id": "Technical Support",
+      "text": "What should I do if I forget my DigiVote password?",
+      "answer": "Use the \"Forgot Password\" option, verify identity with OTP + biometrics, and reset it."
+    },
+    {
+      "id": "q56",
+      "category_id": "Technical Support",
+      "text": "How can I recover my DigiVote account?",
+      "answer": "Contact DigiVote support or use alternate authentication (email, biometrics, or ID verification)."
+    },
+    {
+      "id": "q57",
+      "category_id": "Technical Support",
+      "text": "Who do I contact for technical issues?",
+      "answer": "DigiVote offers 24/7 support via chat, email, and helpline numbers."
+    },
+    {
+      "id": "q58",
+      "category_id": "Technical Support",
+      "text": "What devices are compatible with DigiVote?",
+      "answer": "It works on PCs, laptops, tablets, and smartphones."
+    },
+    {
+      "id": "q59",
+      "category_id": "Technical Support",
+      "text": "Can I vote on DigiVote using my smartphone?",
+      "answer": "Yes, DigiVote is mobile-optimized and works on iOS and Android."
+    },
+    {
+      "id": "q60",
+      "category_id": "Technical Support",
+      "text": "Does DigiVote work on all browsers?",
+      "answer": "Yes, it supports Chrome, Firefox, Edge, Safari, and Opera."
+    },
+    {
+      "id": "q61",
+      "category_id": "Technical Support",
+      "text": "Is there a mobile app for DigiVote?",
+      "answer": "Yes, DigiVote has official iOS and Android apps."
+    },
+    {
+      "id": "q62",
+      "category_id": "Technical Support",
+      "text": "Can I use DigiVote on public Wi-Fi safely?",
+      "answer": "Yes, but using a VPN or private network is recommended for added security."
+    }
+  ]
+}
+   
