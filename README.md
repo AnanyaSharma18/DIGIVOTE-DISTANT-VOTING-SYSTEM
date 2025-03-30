@@ -1,8 +1,6 @@
 # DIGIVOTE: Distant Voting System
 ## Video
-1. DIGIVOTE FRONTEND RUNTHROUGH: [DIGIVOTE Video RunThrough](https://drive.google.com/file/d/1b1N9GEeXpI5PnBAd_C8N1jBEGBccPHoj/view?usp=sharing)
-2. DIGIVOTE USER INTERFACE WORKING:[Voter Video RunThrough](https://drive.google.com/file/d/1GLJ1FErBvV4lhnB0KMsnYiVMRgCj9bJM/view?usp=drive_link)
-3. DIGIVOTE ADMIN INTERFACE WORKING:[Admin Video RunThrough](https://drive.google.com/file/d/1XJRdSbJ8NzE1WEfazfwww1kUQ1t-BYbw/view?usp=drive_link)
+DIGIVOTE WEBSITE RUNTHROUGH: [DIGIVOTE Video RunThrough](https://drive.google.com/file/d/1nNI2oUHfFzTde_MY_VCmMUffrnsFveUm/view?usp=drive_link)
 
 ---
 ## Vision
