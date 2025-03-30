@@ -90,7 +90,8 @@ INSERT INTO Admin (email, password) VALUES
 ('khushi@example.com', 'khushi@51'),
 ('ananya@example.com', 'ananya@11'),
 ('khushig@example.com', 'khushi@50'),
-('akshita@example.com', 'akshita@08');
+('akshita@example.com', 'akshita@08'),
+('eciadmin@example.com', 'eciadmin@58');
 INSERT INTO Constituencies (name, state, district)
 VALUES
 ---for Uttar Pradesh
