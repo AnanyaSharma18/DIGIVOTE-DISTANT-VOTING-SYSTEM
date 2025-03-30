@@ -70,3 +70,6 @@ An Azure Virtual Machine is a computing resource that emulates a physical comput
 6. **Application Interaction**: Utilize the `invokeChaincode.sh` script and other client applications to interact with the deployed blockchain network, facilitating voter registration, vote casting, and result tallying.
 
 By leveraging Azure's scalable infrastructure, the blockchain voting platform can handle varying loads, ensuring reliability and availability during critical voting periods.
+### Cryptographic Hash Generation
+
+To ensure the integrity and security of votes, the platform generates a SHA-256 cryptographic hash for each vote. This hash is stored on the blockchain, making it immutable and tamper-proof.
