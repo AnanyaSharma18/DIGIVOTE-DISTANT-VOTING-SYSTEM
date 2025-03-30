@@ -92,8 +92,26 @@ func (c *VoteCastingContract) CastVote(ctx contractapi.TransactionContextInterfa
         return fmt.Errorf("failed to marshal vote: %v", err)
     }
 
-    return ctx.GetStub().PutState(voterID, voteJSON)
+    // Store vote under voterID
+    err = ctx.GetStub().PutState(voterID, voteJSON)
+    if err != nil {
+        return err
+    }
+
+    // Update vote tally
+    tallyKey := electionID + "_Tally"
+    tallyBytes, err := ctx.GetStub().GetState(tallyKey)
+    tally := make(map[string]int)
+
+    if tallyBytes != nil {
+        _ = json.Unmarshal(tallyBytes, &tally)
+    }
+
+    tally[candidateID]++
+    updatedTallyBytes, _ := json.Marshal(tally)
+    return ctx.GetStub().PutState(tallyKey, updatedTallyBytes)
 }
+
 
 func (c *VoteCastingContract) GetVote(ctx contractapi.TransactionContextInterface, voterID string) (*Vote, error) {
     voteJSON, err := ctx.GetStub().GetState(voterID)
@@ -149,31 +167,21 @@ type VoteTallyingContract struct {
 }
 
 func (c *VoteTallyingContract) TallyVotes(ctx contractapi.TransactionContextInterface, electionID string) (map[string]int, error) {
-    results := make(map[string]int)
-    
-    queryString := fmt.Sprintf(`{"selector":{"electionId":"%s"}}`, electionID)
-    resultsIterator, err := ctx.GetStub().GetQueryResult(queryString)
+    tallyKey := electionID + "_Tally"
+    tallyBytes, err := ctx.GetStub().GetState(tallyKey)
+    if err != nil || tallyBytes == nil {
+        return nil, fmt.Errorf("no votes found for election %s", electionID)
+    }
+
+    var tally map[string]int
+    err = json.Unmarshal(tallyBytes, &tally)
     if err != nil {
-        return nil, fmt.Errorf("failed to get votes: %v", err)
+        return nil, fmt.Errorf("failed to unmarshal tally: %v", err)
     }
-    defer resultsIterator.Close()
 
-    for resultsIterator.HasNext() {
-        queryResponse, err := resultsIterator.Next()
-        if err != nil {
-            return nil, fmt.Errorf("failed to iterate results: %v", err)
-        }
-
-        var vote Vote
-        err = json.Unmarshal(queryResponse.Value, &vote)
-        if err != nil {
-            return nil, fmt.Errorf("failed to unmarshal vote: %v", err)
-        }
-
-        results[vote.CandidateID]++
-    }
-    return results, nil
+    return tally, nil
 }
+
 
 // Main function to start the chaincode
 func main() {
