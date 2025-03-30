@@ -1,7 +1,7 @@
 # DIGIVOTE: Distant Voting System
 ## Video
-DIGIVOTE WEBSITE RUNTHROUGH: [DIGIVOTE Video RunThrough](https://drive.google.com/file/d/1nNI2oUHfFzTde_MY_VCmMUffrnsFveUm/view?usp=drive_link)
-DIGIVOTE PRESENTATION:[DIGIVOTE Presentation](https://docs.google.com/presentation/d/1ANGSRDA_tnbj0TSsxd1dlKMxLYG5V6Zu/edit?usp=drive_link&ouid=108752335974022103687&rtpof=true&sd=true)
+1. DIGIVOTE WEBSITE RUNTHROUGH: [DIGIVOTE Video RunThrough](https://drive.google.com/file/d/1nNI2oUHfFzTde_MY_VCmMUffrnsFveUm/view?usp=drive_link)
+2. DIGIVOTE PRESENTATION:[DIGIVOTE Presentation](https://docs.google.com/presentation/d/1ANGSRDA_tnbj0TSsxd1dlKMxLYG5V6Zu/edit?usp=drive_link&ouid=108752335974022103687&rtpof=true&sd=true)
 
 ---
 ## Vision
